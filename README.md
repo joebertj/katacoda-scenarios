@@ -6,10 +6,10 @@ Visit https://www.katacoda.com/joebert to view the profile and interactive scena
 
 ## Seting up git
 
-git config --global credential.helper 'store --file <path-to-file>'
-git credential-store --file <path-to-file> store
+`git config --global credential.helper 'store --file <path-to-file>'` 
+`git credential-store --file <path-to-file> store`
   
-To test: katacoda push
+To test: `katacoda push`
 
 ### Writing Scenarios
 Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
