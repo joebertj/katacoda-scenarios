@@ -8,6 +8,8 @@ Visit https://www.katacoda.com/joebert to view the profile and interactive scena
 
 git config --global credential.helper 'store --file <path-to-file>'
 git credential-store --file <path-to-file> store
+  
+To test: katacoda push
 
 ### Writing Scenarios
 Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
