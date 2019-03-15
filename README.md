@@ -4,7 +4,7 @@
 
 Visit https://www.katacoda.com/joebert to view the profile and interactive scenarios
 
-## Seting up git
+## Setting up git
 
 `git config --global credential.helper 'store --file <path-to-file>'`  
 `git credential-store --file <path-to-file> store`
