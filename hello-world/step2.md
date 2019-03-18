@@ -8,4 +8,4 @@ Compile your GO source code into an executable
 
 A new executable file will be created name `hello-world`
 
-`ls`
+`ls`{{execute}}

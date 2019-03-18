@@ -8,7 +8,7 @@ Create a file using `vi`
 
 Type this: (Make sure you press **a** or **i** first to toggle edit mode in `vi`)
 
-`a`{{execute}}
+`i`{{execute}}
 
 ```
 package main
