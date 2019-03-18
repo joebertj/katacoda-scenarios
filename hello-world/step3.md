@@ -2,6 +2,7 @@ All programming tutorials begin with Hello World
 
 ## Task
 
-This is an _example_ of creating a scenario and running a **command**
+Now run the compiled GO code
 
-`echo 'Hello World'`{{execute}}
+`./hello-world`{{execute}}
+
