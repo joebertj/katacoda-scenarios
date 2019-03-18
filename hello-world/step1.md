@@ -1,7 +1,11 @@
-This is your first step.
+All programming tutorials begin with Hello World
 
 ## Task
 
-This is an _example_ of creating a scenario and running a **command**
+Create a file using `vi`
 
-`echo 'Hello World'`{{execute}}
+`vi hello-world.go`{{execute}}
+
+Save your work.
+
+`:wq`{{execute}}

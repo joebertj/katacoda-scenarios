@@ -1,13 +1,17 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
+  "title": "Hello World in GO",
+  "description": "Learn Hello World using GO",
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
-    "steps": [{
-      "title": "Step 1 - Run Command",
-      "text": "step1.md"
-    }],
+    "steps": [
+      {"title": "Step 1 - Write hello-world.go",
+      "text": "step1.md"},
+      {"title": "Step 2 - Build hello-world.go",
+      "text": "step2.md"},
+      {"title": "Step 3 - Run hello-world",
+      "text": "step3.md"}
+    ],
     "intro": {
       "text": "intro.md",
       "credits": ""
@@ -21,6 +25,6 @@
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "go"
   }
 }

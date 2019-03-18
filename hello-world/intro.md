@@ -1,1 +1,1 @@
-Welcome to your first Katacoda Scenario!
+GO is a language made in Google
