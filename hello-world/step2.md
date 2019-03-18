@@ -1,7 +1,7 @@
-All programming tutorials begin with Hello World
+GO is a compiled languange
 
 ## Task
 
-This is an _example_ of creating a scenario and running a **command**
+Compile your GO source code into an executable
 
-`echo 'Hello World'`{{execute}}
+`go build hello-world.go`{{execute}}
