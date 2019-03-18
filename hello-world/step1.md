@@ -16,12 +16,12 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("hello world")
+    fmt.Println("Hello World")
 }
-```
+```{{execute}}
 
 Save your work.(Make sure you press **ESC** first to toggle command mode in `vi`)
 
-`\e`{{execute}}
+`^[`{{execute}}
 
 `:wq`{{execute}}
