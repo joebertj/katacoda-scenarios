@@ -6,7 +6,9 @@ Create a file using `vi`
 
 `vi hello-world.go`{{execute}}
 
-Type this: (Make sure you press *a* or *i* first to toggle edit mode in vi)
+Type this: (Make sure you press **a** or **i** first to toggle edit mode in vi)
+
+`a`{{execute}}
 
 ```
 package main
@@ -18,6 +20,8 @@ func main() {
 }
 ```
 
-Save your work.(Make sure you press *ESC* first to toggle command mode in vi)
+Save your work.(Make sure you press **ESC** first to toggle command mode in vi)
+
+`\e`{{execute}}
 
 `:wq`{{execute}}
