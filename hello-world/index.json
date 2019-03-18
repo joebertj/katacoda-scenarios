@@ -23,7 +23,7 @@
       "client": [
         {
           "file": ".vimrc",
-          "target": "~/"
+          "target": "/home/scrapbook/"
         }
       ]
     }
