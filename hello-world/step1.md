@@ -22,8 +22,6 @@ func main() {
 
 Save your work.(Make sure you press **ESC** first to toggle command mode in `vi`)
 
-`\u001b[`{{execute}}
-
 I have remaped **ESC** to **jj**
 
 `jj`{{execute}}
