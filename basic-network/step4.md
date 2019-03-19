@@ -1,13 +1,9 @@
+Since we are using a non-root terminal some of the commands will no longer work. You can test it on an actual Linux machine.
 
+## Manually setting an IP address of interface eth0 to 192.168.1.1
 
-## Let DNS servers resolve the IP of google.com
+`ifconfig eth0 192.168.1.1`
 
-`ifconfig eth0`{{execute}}
+or
 
-The value displayed is one of the IP addresses of google.com
-
-## List DNS Servers
-
-`cat /etc/resolv.conf`{{execute}}
-
-The IP address after the word nameserver is a designated DNS server and will answer to DNS requests.
+`ip addr add 192.168.1.1 dev eth0`

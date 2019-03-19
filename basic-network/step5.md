@@ -1,13 +1,7 @@
-DNS servers resolves names to IP addresses. In Linux it is configured in a file. 
+Since we are using a non-root terminal some of the commands will no longer work. You can test it on an actual Linux machine.
 
-## Let DNS servers resolve the IP of google.com
+## Obtain an IP Address from a listening DHCP Server
 
-`ping -c 1 google.com | head -1 | awk '{print $3}'`{{execute}}
+`dhclient eth0`
 
-The value displayed is one of the IP addresses of google.com
 
-## List DNS Servers
-
-`cat /etc/resolv.conf`{{execute}}
-
-The IP address after the word nameserver is a designated DNS server and will answer to DNS requests.

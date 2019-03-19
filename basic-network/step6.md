@@ -1,13 +1,9 @@
-DNS servers resolves names to IP addresses. In Linux it is configured in a file. 
+We already know that the DNS Servers are configured in `/etc/resolv.conf`
 
-## Let DNS servers resolve the IP of google.com
+## Add 1.1.1.1 as a new DNS server
 
-`ping -c 1 google.com | head -1 | awk '{print $3}'`{{execute}}
+1.1.1.1 is a DNS server owned by Cloudflare.
 
-The value displayed is one of the IP addresses of google.com
+`echo "nameserver 1.1.1.1" >> /etc/resolv.conf`{{execute}}
 
-## List DNS Servers
-
-`cat /etc/resolv.conf`{{execute}}
-
-The IP address after the word nameserver is a designated DNS server and will answer to DNS requests.
+The above command will add 1.1.1.1 as a DNS server. 

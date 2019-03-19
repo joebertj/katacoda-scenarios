@@ -11,3 +11,5 @@ The value displayed is one of the IP addresses of google.com
 `cat /etc/resolv.conf`{{execute}}
 
 The IP address after the word nameserver is a designated DNS server and will answer to DNS requests.
+
+8.8.8.8 is a DNS server owned by Google.
