@@ -10,7 +10,13 @@
       {"title": "Step 2 - Show the gateway server",
       "text": "step2.md"},
       {"title": "Step 3 - List the DNS servers",
-      "text": "step3.md"}
+      "text": "step3.md"},
+      {"title": "Step 4 - Set an IP manually for an interface",
+      "text": "step4.md"},
+      {"title": "Step 5 - Use DHCP to get IP for an interface",
+      "text": "step5.md"},
+      {"title": "Step 6 - Modify DNS servers",
+      "text": "step6.md"}
     ],
     "intro": {
       "text": "intro.md",
