@@ -6,6 +6,8 @@ Run the command bellow
 
 `ifconfig`{{execute}}
 
+Here we can read the so much details and we will try to sort it out below.
+
 ## A modern way of doing
 
 `ip addr`{{execute}}
@@ -19,3 +21,7 @@ We can use `grep` and `awk` to further filter the output so we list the names on
 `lo` is a loopback interface. It is the default interface and you don''t need a physical or virtual netword card for this. All machines have this address available for local access only. The IP address is 127.0.0.1 and the DNS alias is localhost.
 
 `eth0` is either a physical or virtual network card which is automatically named by Linux. If you add another network card it would be probably named eth1.
+
+To list the IP Address and Subnet Mask 
+
+`ifconfig | grep inet`{{execute}}

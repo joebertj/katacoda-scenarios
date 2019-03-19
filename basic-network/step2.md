@@ -1,11 +1,11 @@
-GO is a compiled languange
+The gateway server is most probably a NAT Gateway which will route our outgoing access to Internet 
 
-## Task
+## Display the routing table
 
-Compile your GO source code into an executable
+`route`{{execute}}
 
-`go build hello-world.go`{{execute}}
+## Filter and display the gateway column
 
-A new executable file will be created name `hello-world`
+`route | grep default | awk '{print $2}'`{{execute}}
 
-`ls`{{execute}}
+The IP address displayed here is the gateway server
