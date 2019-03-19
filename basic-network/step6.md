@@ -6,4 +6,6 @@ We already know that the DNS Servers are configured in `/etc/resolv.conf`
 
 `echo "nameserver 1.1.1.1" >> /etc/resolv.conf`{{execute}}
 
-The above command will add 1.1.1.1 as a DNS server. 
+The above command will add 1.1.1.1 as a DNS server. We can now display the updated list of our DNS servers.
+
+`cat /etc/resolv.conf`{{execute}}
