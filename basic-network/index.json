@@ -1,0 +1,38 @@
+{
+  "title": "Basic Networking in Linux",
+  "description": "Learn Basic Networking in Linux",
+  "difficulty": "beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {"title": "Step 1 - List the interfaces",
+      "text": "step1.md"},
+      {"title": "Step 2 - Show the gateway server",
+      "text": "step2.md"},
+      {"title": "Step 3 - List the DNS servers",
+      "text": "step3.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": ".vimrc",
+          "target": "/home/scrapbook/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "go"
+  }
+}
