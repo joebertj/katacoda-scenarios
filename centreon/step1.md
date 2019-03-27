@@ -79,7 +79,7 @@ Return to root directory using `cd`{{execute}}
 
 ## Download and Install
 
-`apt install -y libqt4-dev libqt4-sql-mysql`{{execute}}
+`apt install -y libqt4-dev libqt4-sql-mysql zlib1g-dev librrd-dev liblua5.2-dev libgnutls28-dev`{{execute}}
 
 `wget http://files.download.centreon.com/public/centreon-broker/centreon-broker-18.10.1.tar.gz`{{execute}}
 
