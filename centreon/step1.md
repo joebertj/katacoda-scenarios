@@ -15,9 +15,9 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 ## Install Packages
 
-### MariaDB and mailx
+### MariaDB
 
-`apt-get install -y bsd-mailx mariadb-server`{{execute}}
+`apt-get install -y mariadb-server`{{execute}}
 
 For Postfix Configuration leave the setting to Internet Site and press `TAB`{{execute}} to OK and press `ENTER`{{execute}}
 
@@ -35,9 +35,9 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 `systemctl restart apache2 php7.1-fpm`{{execute}}
 
-### PERL and modules
+### RRDTool, mailx and PERL and modules
 
-`apt-get install -y libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
+`apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
 
 ### SNMP MIBS
 
@@ -66,3 +66,5 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 `cd centreon-web-18.10.4`{{execute}}
 
 `./install.sh -i`{{execute}}
+
+Just use the defaul values by pressing `ENTER`{{execute}} when prompted.
