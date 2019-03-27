@@ -8,8 +8,7 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 ## Configure APT sources 
 
 `add-apt-repository -y ppa:ondrej/php`{{execute}}
-`add-apt-repository -y ppa:ondrej/apache2`{{execute}}
-`apt update`{{execute}}
+`add-apt-repository -y -u ppa:ondrej/apache2`{{execute}}
 
 ## Install Packages
 
