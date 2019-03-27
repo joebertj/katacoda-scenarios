@@ -177,7 +177,7 @@ Set open files limit:
 
 `killall mysqld`{{execute}}
 
-`systemctl start mysql`{{execute}}
+`systemctl restart mysql`{{execute}}
 
 ### Verify open files limit
 
@@ -217,7 +217,7 @@ http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 `apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
 
-For Postfix Configuration leave the setting to Internet Site and press <kbd>TAB</kbd> to OK and press <kbd>ENTER</kbd>``{{execute}} twice. 
+For Postfix Configuration leave the setting to Internet Site and press <kbd>TAB</kbd> to OK and press <kbd>ENTER</kbd> twice. 
 
 ### SNMP MIBS
 
@@ -239,7 +239,7 @@ For Postfix Configuration leave the setting to Internet Site and press <kbd>TAB<
 
 `./install.sh -i`{{execute}}
 
-Press <kbd>ENTER</kbd>``{{execute}} to continue. Use <kbd>SPACEBAR</kbd> to scroll down the license.
+Press <kbd>ENTER</kbd> to continue. Use <kbd>SPACEBAR</kbd> to scroll down the license.
 
 For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value. For the rest, just use the defaul values by pressing <kbd>ENTER</kbd> and <kbd>y</kbd> when prompted. 
 
@@ -247,27 +247,27 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 `apt install -y composer`{{execute}}
 
-`cd /usr/lib/centreon`{{execute}}
+`cd /usr/local/centreon`{{execute}}
 
 `composer install --no-dev --optimize-autoloader`{{execute}}
 
 ### Macro modification
 
-`sed -i -e 's/_CENTREON_PATH_PLACEHOLDER_/centreon/g' /usr/share/centreon/www/index.html`{{execute}}
+`sed -i -e 's/_CENTREON_PATH_PLACEHOLDER_/centreon/g' /usr/local/centreon/www/index.html`{{execute}}
 
-`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/centreon`{{execute}}
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/local/centreon/bin/centreon`{{execute}}
 
-`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/export-mysql-indexes`{{execute}}
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/local/centreon/bin/export-mysql-indexes`{{execute}}
 
-`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/generateSqlLite`{{execute}}
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/local/centreon/bin/generateSqlLite`{{execute}}
 
-`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/import-mysql-indexes`{{execute}}
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/local/centreon/bin/import-mysql-indexes`{{execute}}
 
 ### Javascript dependencies
 
 Return to root directory using `cd`{{execute}}
 
-`cp centreon-web-18.10.4/package* /usr/lib/centreon/`{{execute}}
+`cp centreon-web-18.10.4/package* /usr/local/centreon/`{{execute}}
 
 `npm install`{{execute}}
 
