@@ -56,3 +56,13 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 `groupadd -g 6000 centreon`{{execute}}
 
 `useradd -u 6000 -g centreon -m -r -d /var/lib/centreon -c "Centreon Admin" -s /bin/bash centreon`{{execute}}
+
+## Centreon Web
+
+`http://files.download.centreon.com/public/centreon/centreon-web-18.10.4.tar.gz`{{execute}}
+
+`tar xvzf centreon-web-18.10.4.tar.gz`{{execute}}
+
+`cd centreon-web-18.10.4`{{execute}}
+
+`./install.sh -i`{{execute}}
