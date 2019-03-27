@@ -8,21 +8,32 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 ## Configure APT sources 
 
 `add-apt-repository -y ppa:ondrej/php`{{execute}}
+
 `add-apt-repository -y ppa:ondrej/apache2`{{execute}}
+
 `apt update`{{execute}}
 
 ## Install Packages
 
-### PHP 7.1 and modules
+### Apache and PHP 7.1 and modules
 
 `apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date`{{execute}}
 
 #### Activate Apache PHP-FPM 
 
 `a2enmod proxy_fcgi setenvif proxy rewrite`{{execute}}
+
 `a2enconf php7.1-fpm`{{execute}}
+
 `a2dismod php7.1`{{execute}}
+
 `systemctl restart apache2 php7.1-fpm`{{execute}}
+
+#### Verify Apache and PHP FPM is running
+
+`ps -ef | grep php`{{execute}}
+
+`ps -ef | grep apache`{{execute}}
 
 ### PERL and modules
 
@@ -35,8 +46,11 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 For Postfix Configuration leave the setting to Internet Site and press `TAB`{{execute}} to OK and press `ENTER`{{execute}}
 
 ### SNMP MIBS
-`apt isntall -y install snmp-mibs-downloader``{{execute}}
+
+`apt isntall -y install snmp-mibs-downloader`{{execute}}
 
 ## Adding centreon user
+
 `groupadd -g 6000 centreon`{{execute}}
-1useradd -u 6000 -g centreon -m -r -d /var/lib/centreon -c "Centreon Admin" -s /bin/bash centreon`{{execute}}
+
+`useradd -u 6000 -g centreon -m -r -d /var/lib/centreon -c "Centreon Admin" -s /bin/bash centreon`{{execute}}
