@@ -17,6 +17,13 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 `apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date`{{execute}}
 
+#### Activate Apache PHP-FPM 
+
+`a2enmod proxy_fcgi setenvif proxy rewrite`{{execute}}
+`a2enconf php7.1-fpm`{{execute}}
+`a2dismod php7.1`{{execute}}
+`systemctl restart apache2 php7.1-fpm`{{execute}}
+
 ### PERL and modules
 
 `apt-get install -y libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
