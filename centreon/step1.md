@@ -29,6 +29,10 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 `apt-get install -y mariadb-server`{{execute}}
 
+#### Verify MariaDB is running
+
+`ps -ef | grep mysqld`{{execute}}
+
 ### Apache and PHP 7.1 and modules
 
 `apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date php-xml php7.1-xml`{{execute}}
@@ -49,6 +53,16 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 `systemctl restart apache2 php7.1-fpm`{{execute}}
 
+#### Verify Apache and PHP FPM is running
+
+`ps -ef | grep apache2`{{execute}}
+
+`ps -ef | grep php-fpm`{{execute}}
+
+Access the URL to check:
+
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
 ### RRDTool, mailx and PERL and modules
 
 `apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
@@ -58,18 +72,6 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 ### SNMP MIBS
 
 `apt install -y snmp-mibs-downloader`{{execute}}
-
-#### Verify MariaDB, Apache and PHP FPM is running
-
-`ps -ef | grep mysqld`{{execute}}
-
-`ps -ef | grep apache2`{{execute}}
-
-`ps -ef | grep php-fpm`{{execute}}
-
-Access the URL to check:
-
-http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ## Adding centreon user
 
