@@ -161,13 +161,23 @@ Return to root directory using `cd`{{execute}}
 
 `ps -ef | grep mysqld`{{execute}}
 
-Use CLI to verify:
+Set root password for Centreon Database:
 
-`mysql`{{execute}}
+`mysql -u root`{{execute}}
 
-`show databases;`{{execute}}
+`grant all privileges on centreon.* to 'root'@'localhost' identified by 'centreon';`{{execute}}
+
+`grant all privileges on centreon_storage.* to 'root'@'localhost' identified by 'centreon';`{{execute}}
 
 `exit`{{execute}}
+
+`sed -i 's/\[mysqld\]/\[mysqld\]\nopen_files_limit=32000/' /etc/mysql/mariadb.conf.d/50-server.cnf`{{execute}}
+
+`systemctl restart mysql`{{execute}}
+
+### Verify open files limit
+
+`ps -ef | grep open-files-limit`{{execute}}
 
 ### Apache and PHP 7.1 and modules
 
