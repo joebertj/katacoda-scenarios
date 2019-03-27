@@ -33,3 +33,10 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 `apt-get install -y bsd-mailx mariadb-server`{{execute}}
 
 For Postfix Configuration leave the setting to Internet Site and press `TAB`{{execute}} to OK and press `ENTER`{{execute}}
+
+### SNMP MIBS
+`apt isntall -y install snmp-mibs-downloader``{{execute}}
+
+## Adding centreon user
+`groupadd -g 6000 centreon`{{execute}}
+1useradd -u 6000 -g centreon -m -r -d /var/lib/centreon -c "Centreon Admin" -s /bin/bash centreon`{{execute}}
