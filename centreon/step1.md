@@ -41,7 +41,7 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 ### SNMP MIBS
 
-`apt install -y install snmp-mibs-downloader`{{execute}}
+`apt install -y snmp-mibs-downloader`{{execute}}
 
 #### Verify MariaDB, Apache and PHP FPM is running
 
