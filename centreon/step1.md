@@ -67,4 +67,6 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 `./install.sh -i`{{execute}}
 
-Just use the defaul values by pressing `ENTER`{{execute}} when prompted.
+Press `ENTER`{{execute}} to continue. Use `SPACEBAR`{{execute}} to scroll down the license.
+
+For the first 5 questions answer `y`{{execute}}. For the rest, just use the defaul values by pressing `ENTER`{{execute}} when prompted.
