@@ -105,6 +105,40 @@ Return to root directory using `cd`{{execute}}
 
 `make install`{{execute}}
 
+## Centreon Connector
+
+`apt install -y libperl-dev libssh2-1-dev`{{execute}}
+
+`wget http://files.download.centreon.com/public/centreon-connectors/centreon-connectors-18.10.0.tar.gz`{{execute}}
+
+`tar xvzf centreon-connectors-18.10.0.tar.gz`{{execute}}
+
+`cd centreon-connector-18.10.0/perl/build`{{execute}}
+
+`cmake \
+   -DWITH_PREFIX=/usr \
+   -DWITH_PREFIX_BINARY=/usr/lib/centreon-connector \
+   -DWITH_TESTING=0 .`{{execute}}
+
+`make`{{execute}}
+
+`make install`{{execute}}
+
+Return to root directory using `cd`{{execute}}
+
+`cd centreon-connector-18.10.0/ssh/build`{{execute}}
+
+`cmake \
+   -DWITH_PREFIX=/usr \
+   -DWITH_PREFIX_BINARY=/usr/lib/centreon-connector \
+   -DWITH_TESTING=0 .`{{execute}}
+
+`make`{{execute}}
+
+`make install`{{execute}}
+
+Return to root directory using `cd`{{execute}}
+
 # Centreon Web
 
 ## Configure APT sources 
