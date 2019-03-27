@@ -241,8 +241,14 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 `systemctl reload apache2`{{execute}}
 
+### Create the Centreon Plugins and Broker Log directorie
+
+`mkdir -p /usr/lib/centreon/plugins`{{execute}}
+
+`mkdir /var/log/centreon-broker`{{execute}}
+
 Access the Centreon web interface:
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
 
-Just click Next until you finish.
+For File or Directory 'not found' errors, use /usr/lib as a prefix for directories as what was configured in cmake. Just click Next until you finish.
