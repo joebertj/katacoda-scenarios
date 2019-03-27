@@ -105,6 +105,8 @@ Return to root directory using `cd`{{execute}}
 
 `make install`{{execute}}
 
+Return to root directory using `cd`{{execute}}
+
 ## Centreon Connector
 
 `apt install -y libperl-dev libssh2-1-dev`{{execute}}
