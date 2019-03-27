@@ -7,6 +7,25 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 # Centreon Engine
 
+## Install Clib
+
+`wget http://files.download.centreon.com/public/centreon-clib/centreon-clib-18.10.0.tar.gz`{{execute}}
+
+`tar xvzf centreon-clib-18.10.0.tar.gz`{{execute}}
+
+`cd centreon-clib-18.10.0/build`{{execute}}
+
+`cmake \
+   -DWITH_TESTING=0 \
+   -DWITH_PREFIX=/usr \
+   -DWITH_PREFIX_LIB=/usr/lib \
+   -DWITH_PREFIX_INC=/usr/include/centreon-clib \
+   -DWITH_SHARED_LIB=1 \
+   -DWITH_STATIC_LIB=0 \
+   -DWITH_PKGCONFIG_DIR=/usr/lib/pkgconfig .`{{execute}}
+
+Return to root directory using `cd`{{execute}}
+
 ## Adding centreon-engine user
 
 `groupadd centreon-engine`{{execute}}
@@ -20,6 +39,8 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 `tar xvzf centreon-engine-18.10.0.tar.gz`{{execute}}
 
 `cd centreon-engine-18.10.0`{{execute}}
+
+Return to root directory using `cd`{{execute}}
 
 # Centreon Broker
 
