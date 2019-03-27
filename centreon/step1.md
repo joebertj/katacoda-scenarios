@@ -263,4 +263,4 @@ Access the Centreon web interface:
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
 
-For File or Directory 'not found' errors, use /usr/lib as a prefix for directories as what was configured in cmake. Just click Next until you finish.
+For File or Directory 'not found' errors, use /usr/lib as a prefix for directories as what was configured in cmake. Supply the password for MariaDB earlier. Leave the non-required fields as blank. Just click Next until you finish.
