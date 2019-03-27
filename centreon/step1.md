@@ -191,4 +191,8 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 Press `ENTER`{{execute}} to continue. Use `SPACEBAR`{{execute}} to scroll down the license.
 
-For the first 5 questions answer `y`{{execute}}. For the rest, just use the defaul values by pressing `ENTER`{{execute}} and `y`{{execute}} when prompted. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value.
+For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value. For the rest, just use the defaul values by pressing <kdb>ENTER</kb> and <kbd>y</kbd> when prompted. 
+
+Access the Centreon web interface:
+
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
