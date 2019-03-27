@@ -175,7 +175,9 @@ Set open files limit:
 
 `sed -i 's/\[mysqld\]/\[mysqld\]\nopen_files_limit=32000/' /etc/mysql/mariadb.conf.d/50-server.cnf`{{execute}}
 
-`systemctl restart mysql`{{execute}}
+`killall mysqld`{{execute}}
+
+`systemctl start mysql`{{execute}}
 
 ### Verify open files limit
 
