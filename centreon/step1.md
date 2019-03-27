@@ -21,7 +21,7 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 ### Apache and PHP 7.1 and modules
 
-`apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date php7.1-xml`{{execute}}
+`apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date php-xml php7.1-xml`{{execute}}
 
 ### Update PEAR
 
@@ -65,7 +65,7 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 ## Centreon Web
 
-`http://files.download.centreon.com/public/centreon/centreon-web-18.10.4.tar.gz`{{execute}}
+`wget http://files.download.centreon.com/public/centreon/centreon-web-18.10.4.tar.gz`{{execute}}
 
 `tar xvzf centreon-web-18.10.4.tar.gz`{{execute}}
 
@@ -75,4 +75,4 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 Press `ENTER`{{execute}} to continue. Use `SPACEBAR`{{execute}} to scroll down the license.
 
-For the first 5 questions answer `y`{{execute}}. For the rest, just use the defaul values by pressing `ENTER`{{execute}} when prompted.
+For the first 5 questions answer `y`{{execute}}. For the rest, just use the defaul values by pressing `ENTER`{{execute}} and `y`{{execute}} when prompted. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value.
