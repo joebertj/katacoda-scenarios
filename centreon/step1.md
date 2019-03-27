@@ -193,6 +193,14 @@ Press `ENTER`{{execute}} to continue. Use `SPACEBAR`{{execute}} to scroll down t
 
 For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value. For the rest, just use the defaul values by pressing <kdb>ENTER</kb> and <kbd>y</kbd> when prompted. 
 
+### Enable Centreon config
+
+`ln -s /etc/apache2/conf-available/centreon.conf /etc/apache2/conf-enabled/`{{execute}}
+
+`systemctl reload php7.1-fpm`{{execute}}
+
+`systemctl reload apache2`{{execute}}
+
 Access the Centreon web interface:
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
