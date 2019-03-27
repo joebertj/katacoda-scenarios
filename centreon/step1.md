@@ -245,9 +245,11 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 ### PHP dependencies
 
-`apt install -y composer`{{execute}}
+`apt install -y php-curl composer`{{execute}}
 
 `cd /usr/local/centreon`{{execute}}
+
+`sed -i '286s/continue/break/' usr/share/php/Composer/DependencyResolver/RuleSetGenerator.php`{{execute}}
 
 `composer install --no-dev --optimize-autoloader`{{execute}}
 
