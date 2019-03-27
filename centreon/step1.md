@@ -171,6 +171,8 @@ Set root password for Centreon Database:
 
 `exit`{{execute}}
 
+Set open files limit:
+
 `sed -i 's/\[mysqld\]/\[mysqld\]\nopen_files_limit=32000/' /etc/mysql/mariadb.conf.d/50-server.cnf`{{execute}}
 
 `systemctl restart mysql`{{execute}}
@@ -239,6 +241,38 @@ Press `ENTER`{{execute}} to continue. Use `SPACEBAR`{{execute}} to scroll down t
 
 For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value. For the rest, just use the defaul values by pressing <kdb>ENTER</kb> and <kbd>y</kbd> when prompted. 
 
+### PHP dependencies
+
+`apt install -y composer`{{execute}}
+
+`cd /usr/lib/centreon`{{execute}}
+
+`composer install --no-dev --optimize-autoloader`{{execute}}
+
+### Macro modification
+
+`sed -i -e 's/_CENTREON_PATH_PLACEHOLDER_/centreon/g' /usr/share/centreon/www/index.html`{{execute}}
+
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/centreon`{{execute}}
+
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/export-mysql-indexes`{{execute}}
+
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/generateSqlLite`{{execute}}
+
+`sed -i -e 's/@PHP_BIN@/\/usr\/bin\/php/g' /usr/share/centreon/bin/import-mysql-indexes`{{execute}}
+
+### Javascript dependencies
+
+Return to root directory using `cd`{{execute}}
+
+`cp centreon-web-18.10.4/package* /usr/lib/centreon/`{{execute}}
+
+`npm install`{{execute}}
+
+`npm run build`{{execute}}
+
+`npm prune --production`{{execute}}
+
 ### Configure Timezone
 
 `sed -i 's/;date.timezone =/date.timezone = Asia\/Manila/' /etc/php/7.1/fpm/php.ini`{{execute}}
@@ -247,17 +281,21 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 `systemctl reload php7.1-fpm`{{execute}}
 
+### Create the Centreon Plugins and Broker Log directories
+
+`mkdir -p /usr/lib/centreon/plugins`{{execute}}
+
+`chown centreon: /usr/lib/centreon/plugins`{{execute}}
+
+`mkdir /var/log/centreon-broker`{{execute}}
+
+`chown centreon-broker: /var/log/centreon-broker`{{execute}}
+
 ### Enable Centreon config
 
 `ln -s /etc/apache2/conf-available/centreon.conf /etc/apache2/conf-enabled/`{{execute}}
 
 `systemctl reload apache2`{{execute}}
-
-### Create the Centreon Plugins and Broker Log directorie
-
-`mkdir -p /usr/lib/centreon/plugins`{{execute}}
-
-`mkdir /var/log/centreon-broker`{{execute}}
 
 Access the Centreon web interface:
 
