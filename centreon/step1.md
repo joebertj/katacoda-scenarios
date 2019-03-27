@@ -7,13 +7,13 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 ## Configure APT sources 
 
-`add-apt-repository ppa:ondrej/php`{{execute}}
-`add-apt-repository ppa:ondrej/apache2`{{execute}}
+`add-apt-repository -y ppa:ondrej/php`{{execute}}
+`add-apt-repository -y ppa:ondrej/apache2`{{execute}}
 `apt update`{{execute}}
 
 ## Install Packages
 
-`apt-get install php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json \
+`apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json \
     php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline \
     php7.1-sqlite3 php-pear sudo tofrodos bsd-mailx lsb-release mariadb-server libconfig-inifiles-perl \
     libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl php7.1-ldap php7.1-snmp php-db php-date`{{execute}}
