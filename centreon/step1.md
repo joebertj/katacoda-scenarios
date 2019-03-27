@@ -13,6 +13,30 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 `useradd -g centreon-engine -m -r -d /var/lib/centreon-engine centreon-engine`{{execute}}
 
+## Download and Install
+
+`wget http://files.download.centreon.com/public/centreon-engine/centreon-engine-18.10.0.tar.gz`{{execute}}
+
+`tar xvzf centreon-engine-18.10.0.tar.gz`{{execute}}
+
+`cd centreon-engine-18.10.0`{{execute}}
+
+# Centreon Broker
+
+## Adding centreon-broker user
+
+`groupadd centreon-broker`{{execute}}
+
+`useradd -g centreon-broker -m -r -d /var/lib/centreon-broker centreon-broker`{{execute}}
+
+## Download and Install
+
+`wget http://files.download.centreon.com/public/centreon-broker/centreon-broker-18.10.1.tar.gz`{{execute}}
+
+`tar xvzf centreon-broker-18.10.1.tar.gz`{{execute}}
+
+`cd centreon-broker-18.10.1`{{execute}}
+
 # Centreon Web
 
 ## Configure APT sources 
