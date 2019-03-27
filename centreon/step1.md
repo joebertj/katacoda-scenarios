@@ -9,6 +9,10 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
 
 ## Install Clib
 
+`apt update`{{execute}}
+
+`apt install -y cmake`{{execute}}
+
 `wget http://files.download.centreon.com/public/centreon-clib/centreon-clib-18.10.0.tar.gz`{{execute}}
 
 `tar xvzf centreon-clib-18.10.0.tar.gz`{{execute}}
@@ -24,6 +28,10 @@ When this tutorial was made it is 16.04. When the environment changes some adjus
    -DWITH_STATIC_LIB=0 \
    -DWITH_PKGCONFIG_DIR=/usr/lib/pkgconfig .`{{execute}}
 
+`make`{{execute}}
+
+`make install`{{execute}}
+
 Return to root directory using `cd`{{execute}}
 
 ## Adding centreon-engine user
@@ -38,7 +46,26 @@ Return to root directory using `cd`{{execute}}
 
 `tar xvzf centreon-engine-18.10.0.tar.gz`{{execute}}
 
-`cd centreon-engine-18.10.0`{{execute}}
+`cd centreon-engine-18.10.0/build`{{execute}}
+
+`cmake \
+   -DWITH_PREFIX=/usr \
+   -DWITH_PREFIX_BIN=/usr/sbin \
+   -DWITH_PREFIX_CONF=/etc/centreon-engine \
+   -DWITH_PREFIX_LIB=/usr/lib/centreon-engine \
+   -DWITH_USER=centreon-engine \
+   -DWITH_GROUP=centreon-engine \
+   -DWITH_LOGROTATE_SCRIPT=1 \
+   -DWITH_VAR_DIR=/var/log/centreon-engine \
+   -DWITH_RW_DIR=/var/lib/centreon-engine/rw \
+   -DWITH_STARTUP_DIR=/etc/init.d \
+   -DWITH_PKGCONFIG_SCRIPT=1 \
+   -DWITH_PKGCONFIG_DIR=/usr/lib/pkgconfig \
+   -DWITH_TESTING=0`{{execute}}
+
+`make`{{execute}}
+
+`make install`{{execute}}
 
 Return to root directory using `cd`{{execute}}
 
@@ -52,11 +79,31 @@ Return to root directory using `cd`{{execute}}
 
 ## Download and Install
 
+`apt install -y libqt4-dev libqt4-sql-mysql`{{execute}}
+
 `wget http://files.download.centreon.com/public/centreon-broker/centreon-broker-18.10.1.tar.gz`{{execute}}
 
 `tar xvzf centreon-broker-18.10.1.tar.gz`{{execute}}
 
-`cd centreon-broker-18.10.1`{{execute}}
+`cd centreon-broker-18.10.1/build`{{execute}}
+
+`cmake \
+    -DWITH_DAEMONS='central-broker;central-rrd' \
+    -DWITH_GROUP=centreon-broker \
+    -DWITH_PREFIX=/usr \
+    -DWITH_PREFIX_BIN=/usr/sbin \
+    -DWITH_PREFIX_CONF=/etc/centreon-broker \
+    -DWITH_PREFIX_INC=/usr/include/centreon-broker \
+    -DWITH_PREFIX_LIB=/usr/lib/nagios \
+    -DWITH_PREFIX_MODULES=/usr/share/centreon/lib/centreon-broker \
+    -DWITH_STARTUP_DIR=/etc/init.d \
+    -DWITH_STARTUP_SCRIPT=auto \
+    -DWITH_TESTING=0 \
+    -DWITH_USER=centreon-broker .`{{execute}}
+
+`make`{{execute}}
+
+`make install`{{execute}}
 
 # Centreon Web
 
