@@ -249,7 +249,7 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 `cd /usr/local/centreon`{{execute}}
 
-`sed -i '286s/continue/break/' usr/share/php/Composer/DependencyResolver/RuleSetGenerator.php`{{execute}}
+`sed -i '286s/continue/break/' /usr/share/php/Composer/DependencyResolver/RuleSetGenerator.php`{{execute}}
 
 `composer install --no-dev --optimize-autoloader`{{execute}}
 
