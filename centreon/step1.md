@@ -5,6 +5,16 @@ It would be much easier if we install Centreon on CentOS as it is a supported di
 
 When this tutorial was made it is 16.04. When the environment changes some adjustments should be made.
 
+# Centreon Engine
+
+## Adding centreon-engine user
+
+`groupadd centreon-engine`{{execute}}
+
+`useradd -g centreon-engine -m -r -d /var/lib/centreon-engine centreon-engine`{{execute}}
+
+# Centreon Web
+
 ## Configure APT sources 
 
 `add-apt-repository -y ppa:ondrej/php`{{execute}}
@@ -57,13 +67,17 @@ For Postfix Configuration leave the setting to Internet Site and press `TAB`{{ex
 
 `ps -ef | grep php-fpm`{{execute}}
 
+Access the URL to check:
+
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
 ## Adding centreon user
 
 `groupadd -g 6000 centreon`{{execute}}
 
 `useradd -u 6000 -g centreon -m -r -d /var/lib/centreon -c "Centreon Admin" -s /bin/bash centreon`{{execute}}
 
-## Centreon Web
+## Download and Install
 
 `wget http://files.download.centreon.com/public/centreon/centreon-web-18.10.4.tar.gz`{{execute}}
 
