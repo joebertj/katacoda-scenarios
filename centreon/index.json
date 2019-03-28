@@ -5,9 +5,11 @@
   "time": "30 minutes",
   "details": {
     "steps": [
-      {"title": "Step 1 - Installation",
+      {"title": "Step 1 - Clib, Engine and Broker",
       "text": "step1.md"},
-      {"title": "Step 2 - Plugins",
+      {"title": "Step 2 - MariaDB, Apache, PHP, centreon-web",
+      "text": "step1.md"},
+      {"title": "Step 3 - Plugins",
       "text": "step2.md"}
     ],
     "intro": {
