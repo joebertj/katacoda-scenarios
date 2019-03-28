@@ -8,9 +8,9 @@
       {"title": "Step 1 - Clib, Engine and Broker",
       "text": "step1.md"},
       {"title": "Step 2 - MariaDB, Apache, PHP, centreon-web",
-      "text": "step1.md"},
+      "text": "step2.md"},
       {"title": "Step 3 - Plugins",
-      "text": "step2.md"}
+      "text": "step3.md"}
     ],
     "intro": {
       "text": "intro.md",
