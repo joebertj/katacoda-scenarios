@@ -126,3 +126,5 @@ Now run your script again:
 Check the return value again:
 
 `echo $?`{{execute}}
+
+You can then modify this script to add the **WARNING Status** using `elif`. Modify your script such as if users is between `2` and `3` it will be **WARNING** and `4` and above will be **CRITICAL**.
