@@ -108,7 +108,7 @@ Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
 Modify the script to look like this:
 
 `status=0
-users=\`who | wc -l\`
+users=$(who | wc -l)
 if [ $users -gt 1 ]; then
     echo "CRITICAL - $users are logged in | users=$users"
     status = 2
