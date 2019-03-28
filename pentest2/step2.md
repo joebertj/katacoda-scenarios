@@ -1,0 +1,1 @@
+Discovery is the first part of Penetration testing. Here we gather all information that we can about the system. Network topology, applications, versions, behavior are some of valuable information that we can use on the later part of the penetration testing process.
