@@ -1,5 +1,9 @@
 You can use any scripting language supported on the Host to write Plugins. Centreon accepts plugin formats the same as Nagios. The only requirement is that the script has a single line of output and an associated return value.
 
+## Map `jj` to <kbd>ESC</kbd> button
+
+`echo "inoremap jj <Esc>" > .vimrc`{{execute}}
+
 ## Your first plugin
 
 Create a file:
@@ -70,7 +74,7 @@ Now run your script again:
 
 To check the return value use the command `echo $?`{{execute}}`.
 
-Although it says **OK** the actual status would be **WARNING** because the return value is `1`.
+Although it says **OK** the actual **Status** would be **WARNING** because the return value is `1`.
 
 ### Performance data
 
@@ -111,7 +115,7 @@ Modify the script to look like this:
 users=$(who | wc -l)
 if [ $users -gt 1 ]; then
     echo "CRITICAL - $users are logged in | users=$users"
-    status = 2
+    status=2
 else
     echo "OK - $users are logged in | users=$users"
 fi
