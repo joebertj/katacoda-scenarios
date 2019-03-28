@@ -7,14 +7,8 @@
     "steps": [
       {"title": "Step 1 - Installation",
       "text": "step1.md"},
-      {"title": "Step 2 - Configuration",
-      "text": "step2.md"},
-      {"title": "Step 3 - NRPE",
-      "text": "step3.md"},
-      {"title": "Step 4 - Plugins",
-      "text": "step4.md"},
-      {"title": "Step 5 - Other applications",
-      "text": "step5.md"}
+      {"title": "Step 2 - Plugins",
+      "text": "step2.md"}
     ],
     "intro": {
       "text": "intro.md",

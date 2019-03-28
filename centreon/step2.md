@@ -1,1 +1,3 @@
-Discovery is the first part of Penetration testing. Here we gather all information that we can about the system. Network topology, applications, versions, behavior are some of valuable information that we can use on the later part of the penetration testing process.
+You can use any scripting language supported on the Host to write Plugins. Centreon accepts plugin formats the same as Nagios. The only requirement is that the script has a single line of output and an associated return value.
+
+## Your first plugin
