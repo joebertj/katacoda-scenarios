@@ -22,13 +22,13 @@ You can also add execute permission to your script:
 
 You can now run it this way:
 
-`./my-plugin.sh``{{execute}}
+`./my-plugin.sh`{{execute}}
 
-The output of your script will go under the **Status information** of Centreon
+The output of your script will go under the **Status information** of Centreon.
 
 ## How to generate Status: OK, WARNING, CRITICAL, UNKNOWN
 
-The **Status** of the script does not depent on the message that you placed on your script. The return value of your script is used. In linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the status. 
+The **Status** of the script does not depent on the message that you placed on your script. Instead, the return value of your script is used. In Linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the status. 
 
 - **OK** = 0
 - **WARNING** = 1
@@ -55,7 +55,7 @@ Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
 
 Add the following line after `echo` line:
 
-`exit 1`
+`exit 1`{{execute}}
 
 Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
 
