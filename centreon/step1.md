@@ -301,6 +301,26 @@ Return to root directory using `cd`{{execute}}
 
 `systemctl reload apache2`{{execute}}
 
+## Start Centreon Components
+
+`systemctl start centcore`{{execute}}
+
+`systemctl start centengine`{{execute}}
+
+`systemctl start centreontrapd`{{execute}}
+
+`systemctl start cbd`{{execute}}
+
+### Verify Centreon Compinents
+
+`systemctl status centcore`{{execute}}
+
+`systemctl status centengine`{{execute}}
+
+`systemctl status centreontrapd`{{execute}}
+
+`systemctl status cbd`{{execute}}
+
 Access the Centreon web interface:
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
