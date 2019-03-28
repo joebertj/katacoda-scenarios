@@ -12,4 +12,4 @@ It is a monitoring tool based on Nagios
 
 Step 1 talks about the elaborate installation process. This will help you understand all the componnents and the specific details in each component.
 
-If you just want to learn about Plugins you can skip to Step2.
+If you just want to learn about Plugins you can skip to Step 2.

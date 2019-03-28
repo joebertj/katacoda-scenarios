@@ -10,11 +10,19 @@ You can then press `i`{{execute}} or `a`{{execute}} to enter into edit mode of v
 
 `echo "OK - service is up"`{{execute}}
 
-To save it just press <kbd>ESC</kbd> or `jj`{{execute}} which is premapped in this environment. This will return vi to command mode. Now, you can type `:wq`{{execute}} to save and exit from vi.
+To save it just press <kbd>ESC</kbd> or `jj`{{execute}} which is premapped in this environment. This will return `vi` to command mode. Now, you can type `:wq`{{execute}} to save and exit from `vi`.
 
 Now run your script:
 
-`sh my-plugin.sh`
+`sh my-plugin.sh`{{execute}}
+
+You can also add execute permission to your script:
+
+`chmod +x my-plugin.sh`{{execute}}
+
+You can now run it this way:
+
+`./my-plugin.sh``{{execute}}
 
 The output of your script will go under the **Status information** of Centreon
 
@@ -22,9 +30,36 @@ The output of your script will go under the **Status information** of Centreon
 
 The **Status** of the script does not depent on the message that you placed on your script. The return value of your script is used. In linux you can get a return value by using `$?`{{execute}}. Below are the values of the status. 
 
-- OK = 0
-- WARNING = 1
-- CRITICAL = 2
-- UNKNOWN =3
+- **OK** = 0
+- **WARNING** = 1
+- **CRITICAL** = 2
+- **UNKNOWN** =3
 
-Since you got 0 then the Status will be OK. It does not depend on the Status information.
+Since you got `0` then the Status will be **OK**. It does not depend on the Status information.
+
+Open your script again:
+
+`vi my-plugin.sh`{{execute}}
+
+Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
+
+Add the following line before `echo` line:
+
+`rm / 2>/dev/null
+status=$?`{{execute}}
+
+Add the following line after `echo` line:
+
+`exit $status`
+
+Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
+
+Now run your script again:
+
+`./my-plugin.sh`{{execute}}
+
+To check the return value use the command `$?`{{execute}}`.
+
+Although it says **OK** the actual status would be **WARNING** because the return value is `1`.
+
+
