@@ -28,7 +28,7 @@ The output of your script will go under the **Status information** of Centreon.
 
 ### How to generate Status: OK, WARNING, CRITICAL, UNKNOWN
 
-The **Status** of the script does not depent on the message that you placed on your script. Instead, the return value of your script is used. In Linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the status. 
+The **Status** of the script does not depent on the message that you placed on your script. Instead, the return value of your script is used. In Linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the **Status**. 
 
 - **OK** = 0
 - **WARNING** = 1
@@ -74,15 +74,15 @@ Although it says **OK** the actual status would be **WARNING** because the retur
 
 ### Performance data
 
-Performance data is a feature of the plugin used to graph the values obtained by the plugin if it is practical to do so. One use is case is if you need to count something and if the value is within a range then you can decide the **Status** of what you are monitoring. What you need to do to add this is on the output place a `|` and a `variable` and a `value` in the form of `variable=value`.
+Performance data is a feature of the plugin used to graph the values obtained if it is practical to do so. One use is case is if you need to count something and check if the value falls within a range then you can decide the **Status** from that. What you need to do is place a `|` and a `variable` and a `value` in the form of `variable=value` in the end of the output.
 
-Open your script again:
+To demonstrate, open your script again:
 
 `vi my-plugin.sh`{{execute}}
 
 Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
 
-Add the following at the end of the `echo` line before the <kbd>&quote;</kbd>:
+Add the following at the end of the `echo` line:
 
 ` | users=3`{{execute}}
 
@@ -96,3 +96,33 @@ Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and
 Now run your script again:
 
 `./my-plugin.sh`{{execute}}
+
+Let us apply what we have learned so far to count the number of logged in users in the system. Then we can change **Status** if it is more than `1`.
+
+To do this, open your script again:
+
+`vi my-plugin.sh`{{execute}}
+
+Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
+
+Modify the script to look like this:
+
+`status=0
+users=\`who | wc -l\`
+if [ $users -gt 1 ]; then
+    echo "CRITICAL - $users are logged in | users=$users"
+    status = 2
+else
+    echo "OK - $users are logged in | users=$users"
+fi
+exit $status`
+
+Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
+
+Now run your script again:
+
+`./my-plugin.sh`{{execute}}
+
+Check the return value again:
+
+`echo $?`{{execute}}

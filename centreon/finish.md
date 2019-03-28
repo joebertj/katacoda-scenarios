@@ -1,3 +1,3 @@
 Congratulations!
 
-You have learned the basics of penetration testing
+You have learned Centreon installation and wrote a plugin
