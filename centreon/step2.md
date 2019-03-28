@@ -28,7 +28,7 @@ The output of your script will go under the **Status information** of Centreon
 
 ## How to generate Status: OK, WARNING, CRITICAL, UNKNOWN
 
-The **Status** of the script does not depent on the message that you placed on your script. The return value of your script is used. In linux you can get a return value by using `$?`{{execute}}. Below are the values of the status. 
+The **Status** of the script does not depent on the message that you placed on your script. The return value of your script is used. In linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the status. 
 
 - **OK** = 0
 - **WARNING** = 1
@@ -37,20 +37,25 @@ The **Status** of the script does not depent on the message that you placed on y
 
 Since you got `0` then the Status will be **OK**. It does not depend on the Status information.
 
+To demonstrate return values run the following command:
+
+`rm /`{{execute}} 
+
+It throws an error. Now to see the return value use this:
+
+`echo $?`{{execute}}
+
+Observe that the value is no longer `0`.
+
 Open your script again:
 
 `vi my-plugin.sh`{{execute}}
 
 Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
 
-Add the following line before `echo` line:
-
-`rm / 2>/dev/null
-status=$?`{{execute}}
-
 Add the following line after `echo` line:
 
-`exit $status`
+`exit 1`
 
 Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
 
@@ -58,7 +63,7 @@ Now run your script again:
 
 `./my-plugin.sh`{{execute}}
 
-To check the return value use the command `$?`{{execute}}`.
+To check the return value use the command `echo $?`{{execute}}`.
 
 Although it says **OK** the actual status would be **WARNING** because the return value is `1`.
 
