@@ -131,4 +131,8 @@ Check the return value again:
 
 `echo $?`{{execute}}
 
-You can then modify this script to add the **WARNING Status** using `elif`. Modify your script such as if users is between `2` and `3` it will be **WARNING** and `4` and above will be **CRITICAL**.
+You can then modify this script to add the **WARNING Status** using `elif`. Modify your script such as if users is between `2` and `4` it will be **WARNING** and `5` and above will be **CRITICAL**.
+
+Here is a hint of what you need to add:
+
+`elif [ $users -ge 2 ] && [ $users -le 4 ]; then`
