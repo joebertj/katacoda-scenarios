@@ -21,7 +21,7 @@
       "client": [
         {
           "file": ".vimrc",
-          "target": "/home/scrapbook/"
+          "target": "/root/"
         }
       ]
     }
