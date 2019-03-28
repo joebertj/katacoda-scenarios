@@ -1,4 +1,0 @@
-dns - axfr
-
-mail - mxtoolbox
-
