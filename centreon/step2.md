@@ -103,7 +103,27 @@ Now run your script again:
 
 Let us apply what we have learned so far to count the number of logged in users in the system. Then we can change **Status** if it is more than `1`.
 
-To do this, open your script again:
+Let us say we want to monitor the number of logged in users. We can use this command to list the logged in users:
+
+`who`{{execute}}
+
+We can further filter this by passing to `wc -l` to count the number of lines only:
+
+`who | wc -l`{{execute}}
+
+We can increase the number of users logged in by opening a new Terminal. Go to the Terminal 1 and click on the **+** to access the context menu and choose **Open New Terminal**. Now run the command again:
+
+`who | wc -l`{{execute}}
+
+Open another Terminal and run the command again. You will notice the value increase. To end the session on a terminal type:
+
+`exit`{{execute}}
+
+Run this again to verify:
+
+`who | wc -l`{{execute}}
+
+To do this as the basis for the plugin, open your script again:
 
 `vi my-plugin.sh`{{execute}}
 
@@ -131,8 +151,16 @@ Check the return value again:
 
 `echo $?`{{execute}}
 
-You can then modify this script to add the **WARNING Status** using `elif`. Modify your script such as if users is between `2` and `4` it will be **WARNING** and `5` and above will be **CRITICAL**.
+Open more terminals or end session on the terminals and run your script as you do it. Also check for the return value.
+
+`./my-plugin.sh`{{execute}}
+
+`echo $?`{{execute}}
+
+You can then modify this script to add the **WARNING Status**. Using `elif`. Modify your script such as if users is between `2` and `3` it will be **WARNING** and `4` and above will be **CRITICAL**.
 
 Here is a hint of what you need to add:
 
-`elif [ $users -ge 2 ] && [ $users -le 4 ]; then`
+`elif [ $users -ge 2 ] && [ $users -le 3 ]; then`
+
+To test your script open Terminals as needed or end the session. Also, observe the return values.
