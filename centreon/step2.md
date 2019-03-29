@@ -44,12 +44,6 @@ Set open files limit:
 
 `apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date php-xml php7.1-xml`{{execute}}
 
-### Update PEAR
-
-`pear channel-update pear.php.net`{{execute}}
-
-`pear upgrade-all`{{execute}}
-
 ### Activate Apache PHP-FPM
 
 `a2enmod proxy_fcgi setenvif proxy rewrite`{{execute}}
@@ -72,7 +66,7 @@ http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ### RRDTool, mailx and PERL and modules
 
-apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl
+`apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
 
 For Postfix Configuration leave the setting to Internet Site and press <kbd>TAB</kbd> to OK and press <KBD>ENTER</kbd> twice.
 
@@ -117,6 +111,12 @@ http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreo
 For File or Directory 'not found' errors, use /usr/lib as a prefix for directories as what was configured in cmake. Supply the password for MariaDB earlier. Leave the non-required fields as blank. Just click Next until you finish.
 
 ## Optional Steps
+
+### Update PEAR
+
+`pear channel-update pear.php.net`{{execute}}
+
+`pear upgrade-all`{{execute}}
 
 ### PHP dependencies
 
