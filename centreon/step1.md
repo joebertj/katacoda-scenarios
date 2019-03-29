@@ -155,23 +155,38 @@ Return to root directory using `cd`{{execute}}
 
 `chown centreon-broker: /var/log/centreon-broker`{{execute}}
 
-## Start Centreon Components
+## Configure systemd
 
-`systemctl start centcore`{{execute}}
+`vi /etc/systemd/system/centengine.service`{{execute}}
 
-`systemctl start centengine`{{execute}}
+`i`{{execute}} or `a`{{execute}} to enter edit mode
 
-`systemctl start centreontrapd`{{execute}}
+`[Unit]
+Description=Centreon Engine
 
-`systemctl start cbd`{{execute}}
+[Service]
+ExecStart=/usr/sbin/centengine /etc/centreon-engine/centengine.cfg
+ExecReload=/bin/kill -HUP $MAINPID
+Type=simple
+User=centreon-engine
+
+[Install]
+WantedBy=multi-user.target
+`{{execute}}
+
+<kdb>ESC</kbd> or `jj`{{execute}} to enter command mode
+
+`:wq`{{execute}}
+
+## Enable Centreon Components
+
+`systemctl enable centengine`{{execute}}
+
+`systemctl enable cbd`{{execute}}
 
 ### Verify Centreon Components
 
-`systemctl status centcore`{{execute}}
-
 `systemctl status centengine`{{execute}}
-
-`systemctl status centreontrapd`{{execute}}
 
 `systemctl status cbd`{{execute}}
 
