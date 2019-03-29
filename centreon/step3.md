@@ -1,162 +1,99 @@
-You can use any scripting language supported on the Host to write Plugins. Centreon accepts plugin formats the same as Nagios. The only requirement is that the script has a single line of output and an associated return value.
+## Configure APT sources 
 
-## Your first plugin
+`add-apt-repository -y ppa:ondrej/php`{{execute}}
 
-Create a file:
+`add-apt-repository -y ppa:ondrej/apache2`{{execute}}
 
-`vi my-plugin.sh`{{execute}}
+`apt update`{{execute}}
 
-You can then press `i`{{execute}} or `a`{{execute}} to enter into edit mode of vi. Type the following content:
+## Apache and PHP 7.1 and modules
 
-`echo "OK - service is up"`{{execute}}
+`apt-get install -y php7.1 php7.1-opcache libapache2-mod-php7.1 php7.1-mysql php7.1-curl php7.1-json php7.1-gd php7.1-mcrypt php7.1-intl php7.1-mbstring php7.1-xml php7.1-zip php7.1-fpm php7.1-readline php7.1-sqlite3 php-pear php7.1-ldap php7.1-snmp php-db php-date php-xml php7.1-xml`{{execute}}
 
-To save it just press <kbd>ESC</kbd> or `jj`{{execute}} which is premapped in this environment. This will return `vi` to command mode. Now, you can type `:wq`{{execute}} to save and exit from `vi`.
+## Activate Apache PHP-FPM
 
-Now run your script:
+`a2enmod proxy_fcgi setenvif proxy rewrite`{{execute}}
 
-`sh my-plugin.sh`{{execute}}
+`a2enconf php7.1-fpm`{{execute}}
 
-You can also add execute permission to your script:
+`a2dismod php7.1`{{execute}}
 
-`chmod +x my-plugin.sh`{{execute}}
+`systemctl restart apache2 php7.1-fpm`{{execute}}
 
-You can now run it this way:
+## Verify Apache and PHP FPM is running
 
-`./my-plugin.sh`{{execute}}
+`ps -ef | grep apache2`{{execute}}
 
-The output of your script will go under the **Status information** of Centreon.
+`ps -ef | grep php-fpm`{{execute}}
 
-### How to generate Status: OK, WARNING, CRITICAL, UNKNOWN
+Access the URL to check:
 
-The **Status** of the script does not depent on the message that you placed on your script. Instead, the return value of your script is used. In Linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the **Status**. 
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
-- **OK** = 0
-- **WARNING** = 1
-- **CRITICAL** = 2
-- **UNKNOWN** =3
+## Centreon Web
 
-Since you got `0` then the Status will be **OK**. It does not depend on the Status information.
+Return to root directory using `cd`{{execute}}
 
-To demonstrate return values run the following command:
+`wget http://files.download.centreon.com/public/centreon/centreon-web-18.10.4.tar.gz`{{execute}}
 
-`rm /`{{execute}} 
+`tar xvzf centreon-web-18.10.4.tar.gz`{{execute}}
 
-It throws an error. Now to see the return value use this:
+`cd centreon-web-18.10.4`{{execute}}
 
-`echo $?`{{execute}}
+`./install.sh -i`{{execute}}
 
-Observe that the value is no longer `0`.
+Press <kbd>ENTER</kbd> to continue. Use <kbd>SPACEBAR</kbd> to scroll down the license.
 
-Open your script again:
+For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PEAR.php`{{execute}} as value. For the rest, just use the defaul values by pressing <kbd>ENTER</kbd> and <kbd>y</kbd> when prompted. 
 
-`vi my-plugin.sh`{{execute}}
+### Configure Timezone
 
-Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
+`sed -i 's/;date.timezone =/date.timezone = Asia\/Manila/' /etc/php/7.1/fpm/php.ini`{{execute}}
 
-Add the following line after `echo` line:
+`grep date.timezone /etc/php/7.1/fpm/php.ini`{{execute}}
 
-`exit 1`{{execute}}
+`systemctl reload php7.1-fpm`{{execute}}
 
-It should look like this:
+### Enable Centreon config
 
-`echo "OK - service is up"
-exit 1`
+`ln -s /etc/apache2/conf-available/centreon.conf /etc/apache2/conf-enabled/`{{execute}}
 
-Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
+`systemctl reload apache2`{{execute}}
 
-Now run your script again:
+Access the Centreon web interface:
 
-`./my-plugin.sh`{{execute}}
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
 
-To check the return value use the command `echo $?`{{execute}}`.
+For File or Directory 'not found' errors, use /usr/lib as a prefix for directories as what was configured in cmake. Supply the password for MariaDB earlier. Leave the non-required fields as blank. Just click Next until you finish.
 
-Although it says **OK** the actual **Status** would be **WARNING** because the return value is `1`.
+Before logging in:
 
-### Performance data
+## Enable Centreon Components
 
-Performance data is a feature of the plugin used to graph the values obtained if it is practical to do so. One use is case is if you need to count something and check if the value falls within a range then you can decide the **Status** from that. What you need to do is place a `|` and a `variable` and a `value` in the form of `variable=value` in the end of the output.
+`systemctl enable centengine`{{execute}}
 
-To demonstrate, open your script again:
+`systemctl enable cbd`{{execute}}
 
-`vi my-plugin.sh`{{execute}}
+`systemctl enable centcore`{{execute}}
 
-Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
+`systemctl enable centreontrapd`{{execute}}
 
-Add the following at the end of the `echo` line:
+## Start Centreon Components
 
-` | users=3`{{execute}}
+`systemctl start centengine`{{execute}}
 
-It should look like this:
+`systemctl start cbd`{{execute}}
 
-`echo "OK - service is up | users=3"
-exit 1`
+`systemctl start centcore`{{execute}}
 
-Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
+`systemctl start centreontrapd`{{execute}}
 
-Now run your script again:
+### Verify Centreon Components
 
-`./my-plugin.sh`{{execute}}
+`systemctl status centengine`{{execute}}
 
-Let us apply what we have learned so far to count the number of logged in users in the system. Then we can change **Status** if it is more than `1`.
+`systemctl status cbd`{{execute}}
 
-Let us say we want to monitor the number of logged in users. We can use this command to list the logged in users:
+`systemctl status centcore`{{execute}}
 
-`who`{{execute}}
-
-We can further filter this by passing to `wc -l` to count the number of lines only:
-
-`who | wc -l`{{execute}}
-
-We can increase the number of users logged in by opening a new Terminal. Go to the Terminal 1 and click on the **+** to access the context menu and choose **Open New Terminal**. Now run the command again:
-
-`who | wc -l`{{execute}}
-
-Open another Terminal and run the command again. You will notice the value increase. To end the session on a terminal type:
-
-`exit`{{execute}}
-
-Run this again to verify:
-
-`who | wc -l`{{execute}}
-
-To do this as the basis for the plugin, open your script again:
-
-`vi my-plugin.sh`{{execute}}
-
-Switch to edit mode by using `i`{{execute}} or `a`{{execute}}
-
-Modify the script to look like this:
-
-`status=0
-users=$(who | wc -l)
-if [ $users -gt 1 ]; then
-    echo "CRITICAL - $users are logged in | users=$users"
-    status=2
-else
-    echo "OK - $users are logged in | users=$users"
-fi
-exit $status`
-
-Switch to command mode by hitting <kbd>ESC</kbd> or `jj`{{execute}} and save and exit `:wq`{{execute}}
-
-Now run your script again:
-
-`./my-plugin.sh`{{execute}}
-
-Check the return value again:
-
-`echo $?`{{execute}}
-
-Open more terminals or end session on the terminals and run your script as you do it. Also check for the return value.
-
-`./my-plugin.sh`{{execute}}
-
-`echo $?`{{execute}}
-
-You can then modify this script to add the **WARNING Status**. Using `elif`. Modify your script such as if users is between `2` and `3` it will be **WARNING** and `4` and above will be **CRITICAL**.
-
-Here is a hint of what you need to add:
-
-`elif [ $users -ge 2 ] && [ $users -le 3 ]; then`
-
-To test your script open Terminals as needed or end the session. Also, observe the return values.
+`systemctl status centreontrapd`{{execute}}

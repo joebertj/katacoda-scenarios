@@ -10,6 +10,4 @@ It is a monitoring tool based on Nagios
 
 # About the Course
 
-Step 1 and 2 talks about the elaborate installation process. This will help you understand all the componnents and the specific details in each component.
-
-If you just want to learn about Plugins you can skip to Step 3.
+You will learn about the elaborate installation process. This will help you understand all the componnents and the specific details in each component.

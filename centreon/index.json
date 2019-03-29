@@ -1,15 +1,17 @@
 {
-  "title": "Centreon - a better Nagios",
-  "description": "Learn about Centreon, its architecture and unique features",
+  "title": "Installing Centreon The Hard Way",
+  "description": "Learn about how to install Centreon the hard way on Ubuntu 16.04",
   "difficulty": "intermediate",
   "time": "30 minutes",
   "details": {
     "steps": [
-      {"title": "Step 1 - Clib, Engine and Broker",
+      {"title": "Step 1 - Centreon Clib, Engine and Broker",
       "text": "step1.md"},
-      {"title": "Step 2 - MariaDB, Apache, PHP, centreon-web",
+      {"title": "Step 2 - MariaDB, RRDTool, mailx, PERL, SNMP",
       "text": "step2.md"},
-      {"title": "Step 3 - Plugins",
+      {"title": "Step 3 - Apache, PHP-FPM, Centreon Web",
+      "text": "step3.md"},
+      {"title": "Step 4 - Optional Steps",
       "text": "step3.md"}
     ],
     "intro": {
