@@ -1,7 +1,5 @@
 You can use any scripting language supported on the Host to write Plugins. Centreon accepts plugin formats the same as Nagios. The only requirement is that the script has a single line of output and an associated return value.
 
-## Your first plugin
-
 Create a file:
 
 `vi my-plugin.sh`{{execute}}
@@ -26,7 +24,7 @@ You can now run it this way:
 
 The output of your script will go under the **Status information** of Centreon.
 
-### How to generate Status: OK, WARNING, CRITICAL, UNKNOWN
+## How to generate Status: OK, WARNING, CRITICAL, UNKNOWN
 
 The **Status** of the script does not depent on the message that you placed on your script. Instead, the return value of your script is used. In Linux you can get a return value by using `echo $?`{{execute}}. Below are the values of the **Status**. 
 
