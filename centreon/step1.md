@@ -185,7 +185,7 @@ User=centreon-engine
 WantedBy=multi-user.target
 ```{{execute}}
 
-<kdb>ESC</kbd> or `jj`{{execute}} to enter command mode
+<kbd>ESC</kbd> or `jj`{{execute}} to enter command mode
 
 `:wq`{{execute}}
 
