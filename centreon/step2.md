@@ -122,6 +122,12 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 `systemctl status centreontrapd`{{execute}}
 
+### Manual start
+
+`/usr/bin/perl /usr/local/centreon/bin/centcore --logfile=/var/log/centreon/centcore.log --severity=error --config=/etc/centreon/conf.pm`{{execute}}
+
+`/usr/bin/perl /usr/local/centreon/bin/centreontrapd --logfile=/var/log/centreon/centreontrapd.log --severity=error --config=/etc/centreon/conf.pm --config-extra=/etc/centreon/centreontrapd.pm`{{execute}}
+
 Access the Centreon web interface:
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
