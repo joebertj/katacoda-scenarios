@@ -104,6 +104,24 @@ For the first 5 questions answer `y`{{execute}}. For PEAR use `/usr/share/php/PE
 
 `systemctl reload apache2`{{execute}}
 
+## Enable Centreon Components
+
+`systemctl enable centcore`{{execute}}
+
+`systemctl enable centreontrapd`{{execute}}
+
+## Start Centreon Components
+
+`systemctl start centcore`{{execute}}
+
+`systemctl start centreontrapd`{{execute}}
+
+### Verify Centreon Components
+
+`systemctl status centcore`{{execute}}
+
+`systemctl status centreontrapd`{{execute}}
+
 Access the Centreon web interface:
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreon
