@@ -70,6 +70,8 @@ Before logging in:
 
 ## Enable Centreon Components
 
+`chown -R centreon: /usr/local/centreon`{{execute}}
+
 `systemctl enable centengine`{{execute}}
 
 `systemctl enable cbd`{{execute}}
