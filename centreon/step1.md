@@ -151,11 +151,15 @@ Return to root directory using `cd`{{execute}}
 
 `useradd -u 6000 -g centreon -m -r -d /var/lib/centreon -c "Centreon Admin" -s /bin/bash centreon`{{execute}}
 
-### Create the Centreon Plugins and Broker Log directories
+### Create the Centreon Plugins and Log directories
 
 `mkdir -p /usr/lib/centreon/plugins`{{execute}}
 
 `chown centreon: /usr/lib/centreon/plugins`{{execute}}
+
+`mkdir /var/log/centreon`{{execute}}
+
+`chown centreon: /var/log/centreon`{{execute}}
 
 `mkdir /var/log/centreon-broker`{{execute}}
 
