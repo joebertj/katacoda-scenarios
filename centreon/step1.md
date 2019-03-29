@@ -167,7 +167,8 @@ Return to root directory using `cd`{{execute}}
 
 `i`{{execute}} or `a`{{execute}} to enter edit mode
 
-`[Unit]
+```
+[Unit]
 Description=Centreon Engine
 
 [Service]
@@ -177,7 +178,8 @@ Type=simple
 User=centreon-engine
 
 [Install]
-WantedBy=multi-user.target`{{execute}}
+WantedBy=multi-user.target
+```{{execute}}
 
 <kdb>ESC</kbd> or `jj`{{execute}} to enter command mode
 
