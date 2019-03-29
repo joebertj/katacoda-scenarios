@@ -14,7 +14,7 @@
 
 `apt-get install -y mariadb-server`{{execute}}
 
-#### Verify MariaDB is running
+Verify MariaDB is running
 
 `ps -ef | grep mysqld`{{execute}}
 
@@ -33,6 +33,10 @@ Set open files limit:
 `sed -i 's/\[mysqld\]/\[mysqld\]\nopen_files_limit=32000/' /etc/mysql/mariadb.conf.d/50-server.cnf`{{execute}}
 
 `killall mysqld`{{execute}}
+
+Verify if it is no longer running:
+
+`ps -ef | grep mysqld`{{execute}}
 
 `systemctl restart mysql`{{execute}}
 
