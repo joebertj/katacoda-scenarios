@@ -34,7 +34,7 @@ Set root password for Centreon Database:
 
 ## RRDTool, mailx and PERL and modules
 
-`apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl`{{execute}}
+`apt-get install -y rrdtool bsd-mailx libconfig-inifiles-perl libcrypt-des-perl libdigest-hmac-perl libdigest-sha-perl libgd-perl libdbd-mysql-perl librrd-simple-perl`{{execute}}
 
 For Postfix Configuration leave the setting to Internet Site and press <kbd>TAB</kbd> to OK and press <KBD>ENTER</kbd> twice.
 
