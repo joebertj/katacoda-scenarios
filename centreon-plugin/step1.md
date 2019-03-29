@@ -70,7 +70,7 @@ To check the return value use the command `echo $?`{{execute}}`.
 
 Although it says **OK** the actual **Status** would be **WARNING** because the return value is `1`.
 
-### Performance data
+## Performance data
 
 Performance data is a feature of the plugin used to graph the values obtained if it is practical to do so. One use is case is if you need to count something and check if the value falls within a range then you can decide the **Status** from that. What you need to do is place a `|` and a `variable` and a `value` in the form of `variable=value` in the end of the output.
 
