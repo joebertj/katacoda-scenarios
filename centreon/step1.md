@@ -1,5 +1,11 @@
 It would be much easier if we install Centreon on CentOS as it is a supported distribution. Here we gonna attempt to install it to Ubuntu as it is the available environment in Katacoda.
 
+## Configure vi
+
+Map `jj` to <kbd>ESC</kbd> button
+
+`echo "inoremap jj <Esc>" > .vimrc`{{execute}}
+
 ## Get the Ubuntu version
 `lsb_release -a`{{execute}}
 
@@ -171,8 +177,28 @@ Type=simple
 User=centreon-engine
 
 [Install]
-WantedBy=multi-user.target
-`{{execute}}
+WantedBy=multi-user.target`{{execute}}
+
+<kdb>ESC</kbd> or `jj`{{execute}} to enter command mode
+
+`:wq`{{execute}}
+
+`vi /etc/systemd/system/cbd.service`{{execute}}
+
+`i`{{execute}} or `a`{{execute}} to enter edit mode
+
+`[Unit]
+Description=Centreon Broker watchdog
+
+[Service]
+ExecStart=/usr/sbin/cbwd /etc/centreon-broker/watchdog.xml
+ExecReload=/bin/kill -HUP $MAINPID
+Type=simple
+User=centreon-broker
+UMask=0002
+
+[Install]
+WantedBy=multi-user.target`{{execute}}
 
 <kdb>ESC</kbd> or `jj`{{execute}} to enter command mode
 
@@ -183,6 +209,10 @@ WantedBy=multi-user.target
 `systemctl enable centengine`{{execute}}
 
 `systemctl enable cbd`{{execute}}
+
+## Start Centreon Components
+
+
 
 ### Verify Centreon Components
 

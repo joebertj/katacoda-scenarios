@@ -1,9 +1,5 @@
 You can use any scripting language supported on the Host to write Plugins. Centreon accepts plugin formats the same as Nagios. The only requirement is that the script has a single line of output and an associated return value.
 
-## Map `jj` to <kbd>ESC</kbd> button
-
-`echo "inoremap jj <Esc>" > .vimrc`{{execute}}
-
 ## Your first plugin
 
 Create a file:
