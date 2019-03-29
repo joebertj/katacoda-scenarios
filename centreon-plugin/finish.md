@@ -1,3 +1,3 @@
 Congratulations!
 
-You have learned Centreon installation and wrote a plugin
+You have learned how to wrote a Centreon plugin
