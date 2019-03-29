@@ -189,20 +189,3 @@ WantedBy=multi-user.target
 
 `:wq`{{execute}}
 
-## Enable Centreon Components
-
-`systemctl enable centengine`{{execute}}
-
-`systemctl enable cbd`{{execute}}
-
-## Start Centreon Components
-
-`systemctl start centengine`{{execute}}
-
-`systemctl start cbd`{{execute}}
-
-### Verify Centreon Components
-
-`systemctl status centengine`{{execute}}
-
-`systemctl status cbd`{{execute}}

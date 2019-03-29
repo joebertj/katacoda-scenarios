@@ -114,9 +114,13 @@ http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/centreo
 
 For File or Directory 'not found' errors, use /usr/lib as a prefix for directories as what was configured in cmake. Supply the password for MariaDB earlier. Leave the non-required fields as blank. Just click Next until you finish.
 
-Before loggin in:
+Before logging in:
 
 ## Enable Centreon Components
+
+`systemctl enable centengine`{{execute}}
+
+`systemctl enable cbd`{{execute}}
 
 `systemctl enable centcore`{{execute}}
 
@@ -124,11 +128,19 @@ Before loggin in:
 
 ## Start Centreon Components
 
+`systemctl start centengine`{{execute}}
+
+`systemctl start cbd`{{execute}}
+
 `systemctl start centcore`{{execute}}
 
 `systemctl start centreontrapd`{{execute}}
 
 ### Verify Centreon Components
+
+`systemctl status centengine`{{execute}}
+
+`systemctl status cbd`{{execute}}
 
 `systemctl status centcore`{{execute}}
 
