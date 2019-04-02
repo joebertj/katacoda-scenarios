@@ -16,4 +16,4 @@ If weave Pods are all Running then hit <kbd>CTRL-C</kbd>.
 
 You can access the dashboard here:
 
-http://[[HOST_SUBDOMAIN]]-4040-[[KATACODA_HOST]].environments.katacoda.com/centreon
+http://[[HOST_SUBDOMAIN]]-4040-[[KATACODA_HOST]].environments.katacoda.com/
