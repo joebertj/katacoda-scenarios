@@ -1,11 +1,11 @@
-GO is a compiled languange
+On Terminal Host 1 (master), run the sender Pod:
 
-## Task
+`kubectl run sender --rm -i --tty --image gcr.io/translate-watson/mcjoin`{{execute}}
 
-Compile your GO source code into an executable
+Open New Terminal by clicking **+** beside Terminal Host 1. Run the receiver Pod:
 
-`go build hello-world.go`{{execute}}
+`kubectl run receover --rm -i --tty --image gcr.io/translate-watson/mcjoin`{{execute}}
 
-A new executable file will be created name `hello-world`
+Run on sender: `/mcjoin/mcjoin -s`{{execute}}
 
-`ls`{{execute}}
+Run on reciver: `/mcjoin/mcjoin`{{execute}}
