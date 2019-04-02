@@ -1,0 +1,36 @@
+{
+  "title": "Multicast Demo on Kubernetes using Weave",
+  "description": "Learn Multicast Demo on Kubernetes using Weave CNI",
+  "difficulty": "advanced",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+      {"title": "Step 1 - Install Weave",
+      "text": "step1.md"},
+      {"title": "Step 2 - Run mcjoin Image",
+      "text": "step2.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": ".vimrc",
+          "target": "/home/scrapbook/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
