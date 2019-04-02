@@ -1,5 +1,23 @@
-Multicast is not natively supported on Cloud providers like AWS or GCP
+Weave is a Container Network Interface (CNI) for Kubernetes which has rich features
 
-Weave is a Container Network Interface (CNI) for Kubernetes that supports multicast
-
-This will demonstrate Pods on Kubernetes communicate via Multicast using Weave CNI
+- Virtual Ethernet Switch
+- Fast Data Path
+- Seamless Docker Integration
+- Docker Network Plugin
+- CNI Plugin
+- Address Allocation (IPAM)
+- Naming and Discovery
+- Application Isolation
+- Network Policy
+- Dynamic Network Attachment
+- Security
+- Host Network Integration
+- Service Export
+- Service Import
+- Service Binding
+- Service Routing
+- Multi-cloud Networking
+- Multi-hop Routing
+- Dynamic Topologies
+- Container Mobility
+- Fault Tolerance

@@ -1,3 +1,3 @@
 Congratulations!
 
-You have demonstrated how multicast works on Kubernetes using Weave
+You have learned how to install Weave on Kubernetes

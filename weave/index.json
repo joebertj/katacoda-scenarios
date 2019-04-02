@@ -1,13 +1,13 @@
 {
-  "title": "Multicast Demo on Kubernetes using Weave",
-  "description": "Learn Multicast Demo on Kubernetes using Weave CNI",
-  "difficulty": "advanced",
+  "title": "Weave on Kubernetes",
+  "description": "Learn how to install Weave CNI on Kubernetes",
+  "difficulty": "intermediate",
   "time": "10 minutes",
   "details": {
     "steps": [
       {"title": "Step 1 - Install Weave",
       "text": "step1.md"},
-      {"title": "Step 2 - Run mcjoin Image",
+      {"title": "Step 2 - Install Weave Scope",
       "text": "step2.md"}
     ],
     "intro": {
