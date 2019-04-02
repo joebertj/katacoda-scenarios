@@ -12,14 +12,14 @@ Wait for root prompt and run: `/mcjoin -s -d`{{execute}}
 
 Go back to Terminal Host 1.
 
-You can hit <kdb>CTRL-C</kbd> to stop receiving or sending.
+You can hit <kbd>CTRL-C</kbd> to stop receiving or sending.
 
 Observe that packets flow from sender to receiver.
 
 By default `mcjoin` runs recevier mode. `-d` is debug mode. `-s` is sender mode. Use `-h` to display more options.
 
-To send 10 packets you can use `/mcjoin -s -c 10`{{execute}}
+To leave/join every 5 secs you can use `/mcjoin -d -r 5`{{execute}}
 
-To leave/join every 5 secs you can use `/mcjoin -r 5`{{execute}}
+To send 10 packets you can use `/mcjoin -s -d -c 10`{{execute}}
 
 Type `exit`{{execute}} on each terminal when you are done.
