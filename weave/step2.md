@@ -8,6 +8,8 @@ Wait until all Scope Pods are Running:
 
 If weave Pods are all Running then hit <kbd>CTRL-C</kbd>.
 
+We will now expose the Pods on local network (extenal to Kubernetes):
+
 `pod=$(kubectl get pod -n weave --selector=name=weave-scope-app -o jsonpath={.items..metadata.name})`{{execute}}
 
 `ipaddr=$(ip -4 addr show ens3 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')`{{execute}}
