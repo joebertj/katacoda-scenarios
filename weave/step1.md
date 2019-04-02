@@ -1,8 +1,8 @@
-First thing first start Kubernetes:
+Make sure Kubernetes is started:
 
 `launch.sh`{{execute}}
 
-Before proceeding, check if nodes are ready:
+First things first, check if nodes are ready:
 
 `kubectl get nodes`{{execute}}
 
