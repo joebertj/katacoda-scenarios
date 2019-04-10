@@ -20,6 +20,12 @@ Once again open the Python 3 console:
 
 This means that we have 150 rows and 5 columns. The columns correspond to the List of names.
 
+## Looking at the data contents
+
+`print(dataset.head(10))`{{execute}}
+
+This will display the first 10 lines of the dataset
+
 ## Basic statistics
 
 `print(dataset.describe())`{{execute}}

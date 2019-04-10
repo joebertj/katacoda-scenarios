@@ -10,7 +10,11 @@
       {"title": "Step 2 - IRIS data set and basic operations",
       "text": "step2.md"},
       {"title": "Step 3 - Basic plots",
-      "text": "step3.md"}
+      "text": "step3.md"},
+      {"title": "Step 4 - Evaluate algorithms",
+      "text": "step4.md"},
+      {"title": "Step 5 - Make predictions",
+      "text": "step4.md"}
     ],
     "intro": {
       "text": "intro.md",

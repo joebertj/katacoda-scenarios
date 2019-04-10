@@ -16,12 +16,8 @@ Here we will see generate some basic plots.
 
 [Histogram](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/hist.png)
 
-## scatter plot matrix
-
 `scatter_matrix(dataset)`{{execute}}
 
 `plt.savefig('scatter.png')`{{execute}}
 
 [Scatter plot](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/scatter.png)
-
-Exit the console using `quit()`{{execute}}
