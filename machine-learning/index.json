@@ -26,7 +26,7 @@
           "target": "/home/scrapbook/"
         },
         {
-          "file": "iris.data",
+          "file": "iris.py",
           "target": "/home/scrapbook/"
         }
       ]

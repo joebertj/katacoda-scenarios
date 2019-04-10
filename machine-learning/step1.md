@@ -1,35 +1,41 @@
-There are several ways to list interfaces in Linux
+These are the modules that we need fot this course
+- scipy
+- numpy
+- matplotlib
+- pandas
+- sklearn
 
-## A classic way of doing
+To check if we already have these go to Python 3 console:
 
-Run the command bellow
+`python3`{{execute}}
 
-`ifconfig`{{execute}}
+Run the following commands: 
 
-Here we can read so much details. Don''t worry we will try to sort it out below.
+`import sys`{{execute}}
+`print('Python: {}'.format(sys.version))`{{execute}}
 
-## A modern way of doing
+`import scipy`{{execute}}
+`print('scipy: {}'.format(scipy.__version__))`{{execute}}
 
-`ip addr`{{execute}}
+`import numpy`{{execute}}
+`print('numpy: {}'.format(numpy.__version__))`{{execute}}
 
-## More options
+`import matplotlib`{{execute}}
+`print('matplotlib: {}'.format(matplotlib.__version__))`{{execute}}
 
-We can use `grep` and `awk` to further filter the output so we list the names only:
+`import pandas`{{execute}}
+`print('pandas: {}'.format(pandas.__version__))`{{execute}}
 
-`ifconfig | grep -v -e "^ " -e ^$ | awk '{print $1}'`{{execute}}
+`import sklearn`{{execute}}
+`print('sklearn: {}'.format(sklearn.__version__))`{{execute}}
 
-`lo` is a loopback interface. It is the default interface and you don''t need a physical or virtual netword card for this. All machines have this address available for local access only. The IP address is 127.0.0.1 and the DNS alias is localhost.
+Exit the console using `quit()`{{execute}}
 
-`eth0` is either a physical or virtual network card which is automatically named by Linux. If you add another network card it would be probably named eth1.
+For any missing modules install it using pip. e.g. if scipy is missing
 
-We can display specific interface only
+`pip install scipy`{{execute}}
 
-`ifconfig eth0`{{execute}}
+If pip is not installed, install it first:
 
-or
+`apt install -y pyton-pip`{{execute}}
 
-`ip addr show dev eth0`{{execute}}
-
-To list the IP Address and Subnet Mask 
-
-`ifconfig | grep inet`{{execute}}
