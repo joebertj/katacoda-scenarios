@@ -6,13 +6,13 @@ Here we will see generate some basic plots.
 
 `plt.savefig('box.png')`{{execute}}
 
-[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/box.png](Box plot)
+[Box plot](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/box.png)
 
 `dataset.hist()`{{execute}}
 
 `plt.savefig('hist.png')`{{execute}}
 
-[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/hist.png](Histogram)
+[Histogram](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/hist.png)
 
 ## scatter plot matrix
 
@@ -20,6 +20,6 @@ Here we will see generate some basic plots.
 
 `plt.savefig('scatter.png')`{{execute}}
 
-[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/scatter.png](Scatter plot)
+[Scatter plot](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/scatter.png)
 
 Exit the console using `quit()`{{execute}}

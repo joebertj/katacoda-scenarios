@@ -51,4 +51,4 @@ So that we can view the images that we will generate later, we also need to spin
 
 Check if everything works by accessing nginx. 
 
-[http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com](Test nginx)
+[Test nginx](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com)
