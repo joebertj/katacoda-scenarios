@@ -1,4 +1,4 @@
-These are the modules that we need fot this course
+These are the modules that we need for this course
 - scipy
 - numpy
 - matplotlib

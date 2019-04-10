@@ -6,6 +6,8 @@ Once again open the Python 3 console:
 
 ## Load data set
 
+`import pandas`{{execute}}
+
 `url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"`{{execute}}
 
 `names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']`{{execute}}
