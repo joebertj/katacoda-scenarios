@@ -66,6 +66,8 @@ models.append(('SVM', SVC(gamma='auto')))
 We now use loop into the models List 
 
 ```
+msg = "%s: %f (%f)" % ("Algorithm", "Mean", "Standard Deviation")
+print(msg)
 results = []
 names = []
 for name, model in models:
@@ -75,16 +77,18 @@ for name, model in models:
 	names.append(name)
 	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
 	print(msg)
+
 ```{{execute}}
 
 Now, we compare the algorithms:
 
-```fig = plt.figure()
+```
+fig = plt.figure()
 fig.suptitle('Algorithm Comparison')
 ax = fig.add_subplot(111)
 plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.savefig('compare.png')
-```
+```{{execute}}
 
 [Algorithm comparison](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/compare.png)
