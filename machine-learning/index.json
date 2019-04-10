@@ -7,9 +7,9 @@
     "steps": [
       {"title": "Step 1 - Install Python Modules",
       "text": "step1.md"},
-      {"title": "Step 2 - IRIS data set",
+      {"title": "Step 2 - IRIS data set and basic operations",
       "text": "step2.md"},
-      {"title": "Step 3 - Basic Machine Learning concepts",
+      {"title": "Step 3 - Basic plots",
       "text": "step3.md"}
     ],
     "intro": {
