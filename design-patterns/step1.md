@@ -75,6 +75,8 @@ func main() {
 }
 ```{{execute}}
 
+Go ahead save and quit vi. Then, build and run.
+
 `go build simple.go`{{execute}}
 
 `./simple`{{execute}}
@@ -99,72 +101,54 @@ Wikipedia says
 
 Taking our hiring manager example above. First of all we have an interviewer interface and some implementations for it
 
-```php
-interface Interviewer
-{
-    public function askQuestions();
+```
+type Interviewer struct {
+    job string
+    question string
 }
 
-class Developer implements Interviewer
-{
-    public function askQuestions()
-    {
-        echo 'Asking about design patterns!';
-    }
+func Developer() Interviewer {
+    return Interviewer{
+	job: "Developer",
+	question: "Asking about design patterns!"}
 }
 
-class CommunityExecutive implements Interviewer
-{
-    public function askQuestions()
-    {
-        echo 'Asking about community building';
-    }
+func CommunityExecutive() Interviewer {
+    return Interviewer{
+	job: "Community Executive",
+	question: "Asking about community building"}
 }
 ```
 
 Now let us create our `HiringManager`
 
-```php
-abstract class HiringManager
-{
-
-    // Factory method
-    abstract protected function makeInterviewer(): Interviewer;
-
-    public function takeInterview()
-    {
-        $interviewer = $this->makeInterviewer();
-        $interviewer->askQuestions();
-    }
+```
+type HiringManager struct {
+    job string
+    title string
 }
+
+func (i Interviewer) NewInterviewer(title string) {
+    return HiringManager{
+	job: i.job,
+	title: title}
+}
+
+```{{execute}}
+
+Now any child can extend it and provide the required interviewer and then it can be used as
 
 ```
-Now any child can extend it and provide the required interviewer
-```php
-class DevelopmentManager extends HiringManager
-{
-    protected function makeInterviewer(): Interviewer
-    {
-        return new Developer();
-    }
-}
+var i Interviewer
+i = Developer()
+manager1 := HiringManager{
+    job: "Developer",
+    title: "Development Manager"}
 
-class MarketingManager extends HiringManager
-{
-    protected function makeInterviewer(): Interviewer
-    {
-        return new CommunityExecutive();
-    }
-}
-```
-and then it can be used as
+manager2 := HiringManager{
+    job: "Community Executive",
+    title: "Marketing Manager"}
 
-```php
-$devManager = new DevelopmentManager();
-$devManager->takeInterview(); // Output: Asking about design patterns
-
-$marketingManager = new MarketingManager();
-$marketingManager->takeInterview(); // Output: Asking about community building.
 ```
 
 **When to use?**
