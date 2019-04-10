@@ -1,10 +1,10 @@
-The IRIS data set is a popular training data for Machine Learning. It is just a collection of measurements obtained from samples of 3 Species of Iris. The values are Length and Width of Petals and Sepals. This is a (Wikipedia entry)[https://en.wikipedia.org/wiki/Iris_flower_data_set].
+The Iris  dataset is a pupolar dataset used in learning statistics. It is a collection of measurements obtained from samples of 3 Species of Iris. The values are Length and Width of Petals and Sepals. More from this [Wikipedia entry](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
 Once again open the Python 3 console:
 
 `python3`{{execute}}
 
-## Load data set
+## Load dataset
 
 `import pandas`{{execute}}
 
@@ -14,19 +14,19 @@ Once again open the Python 3 console:
 
 `dataset = pandas.read_csv(url, names=names)`{{execute}}
 
-## Describe the shape of the data set
+## Nmber of rows and columns
 
 `print(dataset.shape)`{{execute}}
 
 This means that we have 150 rows and 5 columns. The columns correspond to the List of names.
 
-## Describe the data set
+## Basic statistics
 
 `print(dataset.describe())`{{execute}}
 
 Here we can see the mean, standard deviation, percentiles, minimum and maximum values for each column.
 
-# Show the class distribution of the data set
+# Group by class
 
 `print(dataset.groupby('class').size())`{{execute}}
 
