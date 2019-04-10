@@ -1,0 +1,42 @@
+{
+  "title": "Intro to Machine Learning",
+  "description": "Introduction to Machine Learning using Python",
+  "difficulty": "beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {"title": "Step 1 - Install Python Modules",
+      "text": "step1.md"},
+      {"title": "Step 2 - IRIS data set",
+      "text": "step2.md"},
+      {"title": "Step 3 - Basic Machine Learning concepts",
+      "text": "step3.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": ".vimrc",
+          "target": "/home/scrapbook/"
+        },
+        {
+          "file": "iris.data",
+          "target": "/home/scrapbook/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "python"
+  }
+}
