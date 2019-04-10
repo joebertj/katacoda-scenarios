@@ -76,8 +76,7 @@ for name, model in models:
 	names.append(name)
 	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
 	print(msg)  
-
-
+print("")
 ```{{execute}}
 
 Now, we compare the algorithms:
