@@ -43,12 +43,12 @@ type door struct {
     height float64
 }
 
-func (d Door) getWidth() {
-    fmt.Printf("Width is %s", d.width)
+func (d Door) getWidth() float64 {
+    return d.width
 }
 
-func (d Door) getHeight() {
-    fmt.Printf("Height is %s", d.height)
+func (d Door) getHeight() float64 {
+    return d.height
 }
 ```{{execute}}
 
@@ -58,18 +58,17 @@ Then we have our door factory that makes the door and returns it
 func WoodenDoor(width float64, height float64) Door {
     return door{
 	width: width,
-	height: height
-    }
+	height: height}
 }
 ```{{execute}}
 
 And then it can be used as
 
 ```
+var door1 Door
 door1 = WoodenDoor(100,200)
-door1.getWidth();
-door1.getHeight();
-door2 =  WoodenDoor(50,100)
+fmt.Printf("Width is %s", door1.width)
+fmt.Printf("Height is %s", door1.height)
 ```{{execute}}
 
 **When to Use?**
