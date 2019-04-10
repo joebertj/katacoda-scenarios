@@ -7,12 +7,12 @@ In plain words
 Wikipedia says
 > In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
 
- * [Simple Factory](#-simple-factory)
- * [Factory Method](#-factory-method)
- * [Abstract Factory](#-abstract-factory)
- * [Builder](#-builder)
- * [Prototype](#-prototype)
- * [Singleton](#-singleton)
+ * Simple Factory
+ * Factory Method
+ * Abstract Factory
+ * Builder
+ * Prototype
+ * Singleton
 
 🏠 Simple Factory
 --------------
@@ -28,6 +28,8 @@ Wikipedia says
 **Programmatic Example**
 
 First of all we have a door interface and the implementation
+
+`vi simple.go`{{execute}}
 
 ```
 package main
@@ -68,10 +70,14 @@ And then it can be used as
 func main() {
     var door1 Door
     door1 = WoodenDoor(100,200)
-    fmt.Printf("Width is %f", door1.getWidth())
-    fmt.Printf("Height is %f", door1.getHeight())
+    fmt.Printf("Width is %f\n", door1.getWidth())
+    fmt.Printf("Height is %f\n", door1.getHeight())
 }
 ```{{execute}}
+
+`go build simple.go`{{execute}}
+
+`./simple`{{execute}}
 
 **When to Use?**
 
