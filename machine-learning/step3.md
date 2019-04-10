@@ -2,6 +2,8 @@ Here we will see generate some basic plots.
 
 `import matplotlib.pyplot as plt`{{execute}}
 
+`from pandas.plotting import scatter_matrix`{{execute}}
+
 `dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)`{{execute}}
 
 `plt.savefig('box.png')`{{execute}}
