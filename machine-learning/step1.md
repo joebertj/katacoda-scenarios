@@ -41,9 +41,9 @@ If pip is not installed, install it first:
 
 So that we can view the images that we will generate later, we also need to spin up an http server like nginx.
 
-`apt upgrade`{{execute}}
+`apt -y update`{{execute}}
 
-`apt install nginx`{{execute}}
+`apt install -y nginx`{{execute}}
 
 `sed -i "s/root \/var\/www\/html;/root \/home\/scrapbook\/tutorial;/" /etc/nginx/sites-enabled/default`{{execute}}
 
