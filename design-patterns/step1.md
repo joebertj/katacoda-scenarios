@@ -101,7 +101,12 @@ Wikipedia says
 
 Taking our hiring manager example above. First of all we have an interviewer interface and some implementations for it
 
+Name this `factory.go`
+
 ```
+package main
+import "fmt"
+
 type Interviewer struct {
     job string
     question string
@@ -109,15 +114,16 @@ type Interviewer struct {
 
 func Developer() Interviewer {
     return Interviewer{
-	job: "Developer",
-	question: "Asking about design patterns!"}
+        job: "Developer",
+        question: "Asking about design patterns!"}
 }
 
 func CommunityExecutive() Interviewer {
     return Interviewer{
-	job: "Community Executive",
-	question: "Asking about community building"}
+        job: "Community Executive",
+        question: "Asking about community building"}
 }
+
 ```
 
 Now let us create our `HiringManager`
@@ -128,7 +134,7 @@ type HiringManager struct {
     title string
 }
 
-func (i Interviewer) NewInterviewer(title string) {
+func (i Interviewer) NewManager(title string) {
     return HiringManager{
 	job: i.job,
 	title: title}
@@ -139,16 +145,15 @@ func (i Interviewer) NewInterviewer(title string) {
 Now any child can extend it and provide the required interviewer and then it can be used as
 
 ```
-var i Interviewer
-i = Developer()
-manager1 := HiringManager{
-    job: "Developer",
-    title: "Development Manager"}
-
-manager2 := HiringManager{
-    job: "Community Executive",
-    title: "Marketing Manager"}
-
+func main() {
+    var i Interviewer
+    i = Developer()
+    fmt.Printf("%s\n",i.job)
+    fmt.Printf("%s\n",i.question)
+    ifactory := Interviewer{
+        job: "Developer",
+        question: "Asking about design patterns!"}
+}
 ```
 
 **When to use?**
