@@ -1,0 +1,38 @@
+{
+  "title": "Design Patterns for Humans",
+  "description": "Learn Design Patterns for humans using GO",
+  "difficulty": "intermediate",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {"title": "Step 1 - Introduction",
+      "text": "step1.md"},
+      {"title": "Step 2 - Creational",
+      "text": "step2.md"},
+      {"title": "Step 3 - Structural",
+      "text": "step3.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": ".vimrc",
+          "target": "/home/scrapbook/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "go"
+  }
+}
