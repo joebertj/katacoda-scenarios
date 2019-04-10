@@ -26,8 +26,8 @@
           "target": "/home/scrapbook/"
         },
         {
-          "file": "iris.py",
-          "target": "/home/scrapbook/"
+          "file": "index.html",
+          "target": "/home/scrapbook/tutorial"
         }
       ]
     }
