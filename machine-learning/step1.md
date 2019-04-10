@@ -47,7 +47,7 @@ So that we can view the images that we will generate later, we also need to spin
 
 `sed -i "s/root \/var\/www\/html;/root \/home\/scrapbook\/tutorial;/" /etc/nginx/sites-enabled/default`{{execute}}
 
-`systemctl restart nginx`{{execute}}
+`service nginx restart`{{execute}}
 
 Check if everything works by accessing nginx. 
 
