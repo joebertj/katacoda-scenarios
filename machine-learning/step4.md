@@ -66,8 +66,7 @@ models.append(('SVM', SVC(gamma='auto')))
 We now use loop into the models List 
 
 ```
-msg = "%s: %f (%f)" % ("Algorithm", "Mean", "Standard Deviation")
-print(msg)
+print("Algorithm:", "Mean", "(Standard Deviation)")
 results = []
 names = []
 for name, model in models:
@@ -76,7 +75,8 @@ for name, model in models:
 	results.append(cv_results)
 	names.append(name)
 	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-	print(msg)
+	print(msg)  
+
 
 ```{{execute}}
 
