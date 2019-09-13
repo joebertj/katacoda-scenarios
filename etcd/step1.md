@@ -1,8 +1,8 @@
 Initialize kubernetes cluster using kubeadm
-`kubeadm init`
+`kubeadm init`{{execute}}
 
 Copy KUBECONFIG 
-`cp /etc/kubernetes/admin.conf $HOME/`
+`cp /etc/kubernetes/admin.conf $HOME/`{{execute}}
 
 List all pods in kube-system namespace
-`kubectl get po`
+`kubectl get po -n kube-system`{{execute}}
