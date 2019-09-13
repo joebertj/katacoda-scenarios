@@ -1,0 +1,38 @@
+{
+  "title": "Introduction to etcd",
+  "description": "Learn about how to install, use and cluster etcd",
+  "difficulty": "intermediate",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {"title": "Step 1 - Install etcd",
+      "text": "step1.md"},
+      {"title": "Step 2 - Basic Usage",
+      "text": "step2.md"},
+      {"title": "Step 3 - Clustering",
+      "text": "step3.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": ".vimrc",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
