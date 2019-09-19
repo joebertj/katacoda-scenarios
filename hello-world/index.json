@@ -10,7 +10,9 @@
       {"title": "Step 2 - Build hello-world.go",
       "text": "step2.md"},
       {"title": "Step 3 - Run hello-world",
-      "text": "step3.md"}
+      "text": "step3.md"},
+      {"title": "Step 4 - Libraries",
+      "text": "step4.md"}
     ],
     "intro": {
       "text": "intro.md",
