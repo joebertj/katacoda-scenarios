@@ -7,7 +7,9 @@ The following commands will show the information about a certain commands
 
 Displays GNU-style documentation
 
-For example, `info ls`{{execute}}
+Install info using: `apt install info`{{execute}}
+
+As an example we can get info on `ls` using `info ls`{{execute}}
 
 ## man
 
