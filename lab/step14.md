@@ -4,11 +4,13 @@ A command is a block-sorting file compressor that can be used to both compress a
 
 `bunzip2 sample.txt.bz2`{{execute}}
 
+
 ##bzip2
 
 Is a command line based file compressor in Linux that uses the Burrows-Wheeler block sorting text compression algorithm and Huffman coding to carry out the compression process.
 
 `bzip2 sample.txt`{{execute}}
+
 
 ##cpio
 
@@ -17,11 +19,13 @@ Stands for /"copy in, copy out". It is used for processing the archive files lik
 `cpio -o < name-list > archive`{{execute}}
 `cpio -i < archive`{{execute}}
 
+
 ##gunzip
 
 Is used to compress or expand a file or a list of file.
 
 `gunzip sample.txt`{{execute}}
+
 
 ##gzip
 
@@ -32,12 +36,14 @@ This command compresses files. Each single files is compressed into a single fil
 `gzip -L sample.txt`{{execute}}
 `gzip -f sample.txt`{{execute}}
 
+
 ##tar
 
 Stands for tape archive, is used to create Achive and extract the Archive files. tar command in linux is one of the important command which provides archiving functionality in Linux.
 
 `tar cvf sample.tar *.c`{{execute}}
 `tar xvf sample.tar`{{execute}}
+
 
 uncompress
 
