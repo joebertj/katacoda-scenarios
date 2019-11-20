@@ -1,11 +1,17 @@
-# Online Documentation Commands
+The following commands will show the information about a certain commands
 
+- info
+- man
 
-info
+## info
 
 Displays GNU-style documentation
 
-man
+Install info using: `apt install info`{{execute}}
+
+As an example we can get info on `ls` using `info ls`{{execute}}
+
+## man
 
 Displays the traditional Unix online manual
 
