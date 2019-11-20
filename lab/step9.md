@@ -1,22 +1,26 @@
-# Process and System Utility Commands
+## Process and System Utility Commands
 
-login
+# login
 
 Allows a user to login
+-> is a command used to establish a new session with the system.
 
-lsof
+# lsof
 
 Lists open files and other information
+-> is a command that gives information to find out files opened by a process.
 
-mount
+# mount
 
 Attaches a filesystem to a directory tree
+-> is a command that mounts a storage device or filesystem, making it accessible and attaching it to an existing directory structure. 
 
-newgrp
+# newgrp
 
 Changes the current default group
+-> is a command that adds the group to the user groupset.
 
-nice
+# nice
 
 Runs a process with a suggested priority
 
