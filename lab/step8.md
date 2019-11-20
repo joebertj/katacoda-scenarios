@@ -3,120 +3,120 @@
 
 ## at
 
--Runs a program at a certain time
+- Runs a program at a certain time
 
 
 ## chfn
 
--Changes finger information
+- Changes finger information
 
 
 ## chsh
 
--Changes shells
+- Changes shells
 
 
 ## crontab
 
--Runs a periodic job
+- Runs a periodic job
 
 
 ## groups
 
--Shows group membership
+- Shows group membership
 
 
 ## id
 
--Shows the current user ID
+- Shows the current user ID
 
 
 ## kill
 
--Sends a signal to a process
+- Sends a signal to a process
 
 
 ## logger
 
--Records a message to the system logger
+- Records a message to the system logger
 
 
 ## login
 
--Allows a user to login
+- Allows a user to login
 
 
 ## lsof
 
--Lists open files and other information
+- Lists open files and other information
 
 
 ## mount
 
--Attaches a filesystem to a directory tree
+- Attaches a filesystem to a directory tree
 
 
 ## newgrp
 
--Changes the current default group
+- Changes the current default group
 
 
 ## nice
 
--Runs a process with a suggested priority
+- Runs a process with a suggested priority
 
 ## passwd
 
 
--Changes a password
+- Changes a password
 
 
 ## printenv
 
--Prints environment variables
+- Prints environment variables
 
 
 ## ps
 
--Displays processes
+- Displays processes
 
 
 ## renice
 
--Changes the suggested priority for a process
+- Changes the suggested priority for a process
 
 
 ## reset
 
--Attempts to reset the terminal
+- Attempts to reset the terminal
 
 
 ## strace
 
--Traces system calls
+- Traces system calls
 
 
 ## su
 
--Switches users
+- Switches users
 
 
 ## sync
 
--Writes kernel buffers to disk
+- Writes kernel buffers to disk
 
 
 ## time
 
--Displays how much processor and system time a process takes
+- Displays how much processor and system time a process takes
 
 
 ## top
 
--Shows the processes with the most resource consumption
+- Shows the processes with the most resource consumption
 
 
 ## umount
 
--Detaches a filesystem from a directory tree
+- Detaches a filesystem from a directory tree
 
