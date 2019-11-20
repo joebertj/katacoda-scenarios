@@ -1,36 +1,51 @@
 # Text Processing and Scripting Commands
 
-
-awk
+## info
 
 The awk general-purpose text processing language
 
-basename
+Example 
+
+To count the lines in a file.
+
+`awk 'END { print NR }' meh`{{execute}}
+
+### basename
 
 Strips extensions and directories from filenames
 
-cat
+Example
+
+`awk 'END { print NR }' meh`{{execute}}
+
+#### cat
 
 Displays and concatenates files
 
-cmp
+##### cmp
 
 Compares binary files
 
-cut
+###### cut
 
 Extracts columns of lines
 
-diff
+Example
+
+`ps -ef | cut -f8`{{execute}}
+
+####### diff
 
 Compares text files
 
-dirname
+######## dirname
 
 Extracts the directory from a filename
 
-echo
+######### echo
 
 Prints text
 
-ed
+########## ed
+
+

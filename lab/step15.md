@@ -1,52 +1,63 @@
 # Miscellaneous Utility Commands
 
 
-bc
+## bc
 
 bc is stand for Basic Calculator it is a command line utility that offers everything you expect from a simple scientific or financial calculator.
 
 `echo "1+1" | bc`{{execute}}
 
-cal
+## cal
 
 to display a calendar.
 
 `cal`{{execute}} 
 
-date
+## date
 
 Displays the current date
 
 `date`{{execute}}
 
-dc
+## dc
 
 Runs the RPN calculator
 
 `dc`{{execute}}
 
-pwd
+## pwd
 
 Prints the working directory
 
-`pwd`{{excute}}
+`pwd`{{execute}}
 
-script
+## script
 
 Starts a shell where all output is recorded in a file
 
-sleep
+`script`{{execute}}
+
+
+## sleep
 
 Pauses for a specified number of seconds
 
-strings
+`sleep 3s`{{execute}}
+
+## strings
 
 Attempts to show any text embedded in a binary file
 
-yes
+`strings -lab test`{{execute}}
+
+## yes
 
 Prints an endless stream of lines
 
-which
+`yes`{{execute}}
 
-Displays the first matching program in the current path
+## which
+
+Displays the first matching program in the current path 
+
+`which find`{{execute}}
