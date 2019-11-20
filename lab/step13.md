@@ -4,7 +4,7 @@
 
 A decompression program
 
-uncompress [-cfv] ~{{execute}}
+`uncompress noexistingfile.txt.z`{{execute}}
 _______________________________________________________________
 ## 2. unshar
 
@@ -20,6 +20,7 @@ ______________________________________________________________
 ## 4. uuencode
 
 Encodes binary file into a text file
+`uuencode /dev/stdout'{{execute}}
 ______________________________________________________________
 
 ## 5. zcat
@@ -27,6 +28,8 @@ ______________________________________________________________
 Decompresses into a file stream
 
 A decompression program
+
+`zcat file.z | wc -c`{{execute}}
 ______________________________________________________________
 
 ## 6. unshar
