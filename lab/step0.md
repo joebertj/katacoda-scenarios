@@ -1,11 +1,13 @@
 # Online Documentation Commands
 
 
-info
+## info
 
 Displays GNU-style documentation
 
-man
+For example, `info ls`{{execute}}
+
+## man
 
 Displays the traditional Unix online manual
 
