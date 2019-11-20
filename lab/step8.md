@@ -26,97 +26,97 @@
 -Shows group membership
 
 
-##id
+## id
 
 -Shows the current user ID
 
 
-##kill
+## kill
 
 -Sends a signal to a process
 
 
-##logger
+## logger
 
 -Records a message to the system logger
 
 
-##login
+## login
 
 -Allows a user to login
 
 
-##lsof
+## lsof
 
 -Lists open files and other information
 
 
-##mount
+## mount
 
 -Attaches a filesystem to a directory tree
 
 
-##newgrp
+## newgrp
 
 -Changes the current default group
 
 
-##nice
+## nice
 
 -Runs a process with a suggested priority
 
-##passwd
+## passwd
 
 
 -Changes a password
 
 
-##printenv
+## printenv
 
 -Prints environment variables
 
 
-##ps
+## ps
 
 -Displays processes
 
 
-##renice
+## renice
 
 -Changes the suggested priority for a process
 
 
-##reset
+## reset
 
 -Attempts to reset the terminal
 
 
-##strace
+## strace
 
 -Traces system calls
 
 
-##su
+## su
 
 -Switches users
 
 
-##sync
+## sync
 
 -Writes kernel buffers to disk
 
 
-##time
+## time
 
 -Displays how much processor and system time a process takes
 
 
-##top
+## top
 
 -Shows the processes with the most resource consumption
 
 
-##umount
+## umount
 
 -Detaches a filesystem from a directory tree
 
