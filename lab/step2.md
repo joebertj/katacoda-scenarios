@@ -19,12 +19,18 @@ Searches for a file
 
 Get empty directories and file by using `find -empty`{{execute}}
 
-ln
+## ln
 
 Creates a symbolic or hard link
 
-ls
+## ls
 
 Lists files
 
-mkdir
+Get list of files from the current directory by using `ls`{{execute}} 
+
+## mkdir
+
+Creates a new directory
+
+Create Folder 1 directory by using `mkdir Folder 1`{{execute}}
