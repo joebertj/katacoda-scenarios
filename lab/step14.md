@@ -2,7 +2,7 @@
 
 A command is a block-sorting file compressor that can be used to both compress and decompress data, depending on how you use it.
 
-`bunzip2 /katacoda-scenarios/lab/sample.txt.bz2`{{execute}}
+`bunzip2 sample.txt.bz2`{{execute}}
 
 
 ##bzip2
