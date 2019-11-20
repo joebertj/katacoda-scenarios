@@ -1,4 +1,3 @@
-# Archival and Compression Commands
 
 ## 1. uncompress 
 
@@ -20,7 +19,7 @@ ______________________________________________________________
 ## 4. uuencode
 
 Encodes binary file into a text file
-`uuencode /dev/stdout'{{execute}}
+`uuencode dev stdout'{{execute}}
 ______________________________________________________________
 
 ## 5. zcat
