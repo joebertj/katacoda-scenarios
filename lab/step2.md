@@ -1,11 +1,11 @@
 
 Displays disk usage statistics
 
-du
+##du
 
 Displays directory space usage
 
-As an example we can get disk usage of /home/kzc using `du /home/kzc`{{execute}}
+As an example we can get disk usage by  using `du`{{execute}}
 
 file
 
