@@ -1,0 +1,64 @@
+{
+  "title": "Linux Commands Lab",
+  "description": "Learn Linux Commands",
+  "difficulty": "beginner",
+  "time": "30 minutes",
+  "details": {
+    "steps": [
+      {"title": "Step 0 - Online documentation",
+      "text": "step0.md"},
+      {"title": "Step 1 - File management",
+      "text": "step1.md"},
+      {"title": "Step 2 - File management",
+      "text": "step2.md"},
+      {"title": "Step 3 - File management",
+      "text": "step3.md"},
+      {"title": "Step 4 - Text processing",
+      "text": "step4.md"},
+      {"title": "Step 5 - Text processing",
+      "text": "step5.md"},
+      {"title": "Step 6 - Text processing",
+      "text": "step5.md"},
+      {"title": "Step 7 - Text processing",
+      "text": "step5.md"},
+      {"title": "Step 8 - Process and system utilities",
+      "text": "step5.md"},
+      {"title": "Step 9 - Process and system utilities",
+      "text": "step5.md"},
+      {"title": "Step 10 - Process and system utilities",
+      "text": "step5.md"},
+      {"title": "Step 11 - System information",
+      "text": "step5.md"},
+      {"title": "Step 12 - System information",
+      "text": "step5.md"},
+      {"title": "Step 13 - Archival and compression",
+      "text": "step5.md"},
+      {"title": "Step 14 - Archival and compression",
+      "text": "step5.md"},
+      {"title": "Step 15 - Miscellaneous utility",
+      "text": "step5.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "client": [
+        {
+          "file": ".vimrc",
+          "target": "/home/scrapbook/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\n"
+  },
+  "backend": {
+    "imageid": "bash"
+  }
+}
