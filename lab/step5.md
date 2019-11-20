@@ -10,17 +10,17 @@
 
 A remarkable pattern scanning and processing language.
 
-`man awk -y info`{{execute}}
+`man awk -y info`{{execute}} Type q to exit.
 
 ## sed command
 
 A powerful stream editor for filtering and transforming text.
 
-`man sed -y info`{{execute}}
+`man sed -y info`{{execute}} Type q to exit.
 
 ## grep
 
 Filters output lines matching a given pattern.
 
-`man grep -y info`{{execute}}
+`man grep -y info`{{execute}} Type q to exit.
 
