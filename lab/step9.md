@@ -13,13 +13,14 @@ Lists open files and other information
 # mount
 
 Attaches a filesystem to a directory tree
--> 
+-> is a command that mounts a storage device or filesystem, making it accessible and attaching it to an existing directory structure. 
 
-newgrp
+# newgrp
 
 Changes the current default group
+-> is a command that adds the group to the user groupset.
 
-nice
+# nice
 
 Runs a process with a suggested priority
 
