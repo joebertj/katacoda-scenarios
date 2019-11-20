@@ -13,7 +13,6 @@ Displays disk usage statistics
 
 ## dmesg
 
-`sudo sysctl kernel.dmesg_restrict=0`{{execute}}
 `dmesg`{{execute}}
 
 Displays buffered kernel messages
