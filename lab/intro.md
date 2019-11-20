@@ -7,7 +7,3 @@ This course will let you learn about Basic Commands in Linux:
 - System information
 - Archival and compression
 - Miscellaneous utility
-- 
-- 
-- 
-- 
