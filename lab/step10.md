@@ -23,6 +23,8 @@ eg: `renice -a 1 2`{{execute}} - to change the priority from 1 to 2
 ## su
 `su`{{execute}} - Switches users
 
+eg: `su wuji18`{{execute}} to switch users to wuji18
+
 ## sync
 `sync`{{execute}} - Writes kernel buffers to disk
 
@@ -33,6 +35,7 @@ eg: `time ls`{{execute}} - to show all the time ls has been executed
 
 ## top
 `top`{{execute}} - Shows the processes with the most resource consumption
+
 type `u`{{execute}} to exit
 
 ## umount

@@ -13,9 +13,11 @@ Identifies a file type
 
 Get file type of docker by using `file docker`{{execute}}
 
-find
+## find
 
 Searches for a file
+
+Get empty directories and file by using `find -empty`{{execute}}
 
 ln
 
