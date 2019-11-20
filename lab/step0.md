@@ -15,4 +15,4 @@ As an example we can get info on `ls` using `info ls`{{execute}}. Type `q` to ex
 
 Displays the traditional Unix online manual
 
-For example `man cd`{{execute}}. Type `q` to exit.
+For example `man ls`{{execute}}. Type `q` to exit.
