@@ -1,9 +1,18 @@
 # Text Processing and Scripting Commands
 
+- awk
+- basename
+- cat
+- cmp
+- cut
 
-awk
+## info
 
 The awk general-purpose text processing language
+
+Example: 
+To count the lines in a file
+`awk 'END { print NR }' tutorial`{{execute}}
 
 basename
 
