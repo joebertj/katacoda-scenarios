@@ -1,99 +1,122 @@
-# Process and System Utility Commands
+## Process and System Utility Commands
 
 
-at
+## at
 
-Runs a program at a certain time
+-Runs a program at a certain time
 
-chfn
 
-Changes finger information
+## chfn
 
-chsh
+-Changes finger information
 
-Changes shells
 
-crontab
+## chsh
 
-Runs a periodic job
+-Changes shells
 
-groups
 
-Shows group membership
+## crontab
 
-id
+-Runs a periodic job
 
-Shows the current user ID
 
-kill
+## groups
 
-Sends a signal to a process
+-Shows group membership
 
-logger
 
-Records a message to the system logger
+##id
 
-login
+-Shows the current user ID
 
-Allows a user to login
 
-lsof
+##kill
 
-Lists open files and other information
+-Sends a signal to a process
 
-mount
 
-Attaches a filesystem to a directory tree
+##logger
 
-newgrp
+-Records a message to the system logger
 
-Changes the current default group
 
-nice
+##login
 
-Runs a process with a suggested priority
+-Allows a user to login
 
-passwd
 
-Changes a password
+##lsof
 
-printenv
+-Lists open files and other information
 
-Prints environment variables
 
-ps
+##mount
 
-Displays processes
+-Attaches a filesystem to a directory tree
 
-renice
 
-Changes the suggested priority for a process
+##newgrp
 
-reset
+-Changes the current default group
 
-Attempts to reset the terminal
 
-strace
+##nice
 
-Traces system calls
+-Runs a process with a suggested priority
 
-su
+##passwd
 
-Switches users
 
-sync
+-Changes a password
 
-Writes kernel buffers to disk
 
-time
+##printenv
 
-Displays how much processor and system time a process takes
+-Prints environment variables
 
-top
 
-Shows the processes with the most resource consumption
+##ps
 
-umount
+-Displays processes
 
-Detaches a filesystem from a directory tree
+
+##renice
+
+-Changes the suggested priority for a process
+
+
+##reset
+
+-Attempts to reset the terminal
+
+
+##strace
+
+-Traces system calls
+
+
+##su
+
+-Switches users
+
+
+##sync
+
+-Writes kernel buffers to disk
+
+
+##time
+
+-Displays how much processor and system time a process takes
+
+
+##top
+
+-Shows the processes with the most resource consumption
+
+
+##umount
+
+-Detaches a filesystem from a directory tree
 
