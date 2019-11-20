@@ -2,6 +2,6 @@ Since we are using a non-root terminal some of the commands will no longer work.
 
 ## Obtain an IP Address from a listening DHCP Server
 
-`dhclient eth0`
+`dhclient eth0`{{execute}}
 
 
