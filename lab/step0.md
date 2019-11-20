@@ -1,4 +1,4 @@
-The following commands will show the information about a certain commands
+The following commands will show the information about certain commands
 
 - info
 - man
