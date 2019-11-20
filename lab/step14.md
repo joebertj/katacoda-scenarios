@@ -1,16 +1,9 @@
-# Online Documentation Commands
-
-
-info
-
-Displays GNU-style documentation
-
-# Archival and Compression Commands
-
-
 bunzip2
 
 A command is a block-sorting file compressor that can be used to both compress and decompress data, depending on how you use it.
+
+Decompress a file
+`bunzip2 test-bzip2.txt.bz2`{{execute}}
 
 bzip2
 
