@@ -4,7 +4,7 @@ This will show the Process and System Utility Commands.
 Try to do the apt search and apt install commands if not some commands here are not yet available.
 
 example: 'sudo apt search renice'{{execute}} 
-         'sudo apt install renice'{{execute}}
+         'sudo apt install -y  renice'{{execute}}
 
 'renice'{{execute}}
 
