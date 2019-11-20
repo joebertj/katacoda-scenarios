@@ -23,7 +23,7 @@ Displays the current date
 
 Runs the RPN calculator
 
-`dc`{{execute}}
+"echo "5 3 * p" | dc`{{execute}}
 
 ## pwd
 
