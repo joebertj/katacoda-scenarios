@@ -11,6 +11,8 @@ example: `sudo apt search renice`{{execute}}
 ## renice
 `renice`{{execute}} - Changes the suggested priority for a process
 
+eg: `renice -a 1 2` - to change the priority from 1 to 2
+
 ## reset
 `reset`{{execute}} - Attempts to reset the terminal
 
@@ -26,8 +28,11 @@ example: `sudo apt search renice`{{execute}}
 ## time
 `time`{{execute}} - Displays how much processor and system time a process takes
 
+eg: `time ls`{{execute}} - to show all the time ls has been executed
+
 ## top
 `top`{{execute}} - Shows the processes with the most resource consumption
+type `u`{{execute}} to exit
 
 ## umount
 `umount`{{execute}} - Detaches a filesystem from a directory tree
