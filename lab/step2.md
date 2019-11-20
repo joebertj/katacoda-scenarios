@@ -1,7 +1,7 @@
 
 Displays disk usage statistics
 
-du
+##du
 
 Displays directory space usage
 
