@@ -1,40 +1,34 @@
+
 This will show the Process and System Utility Commands.
+
+## Search and Install
+
 Try to do the apt search and apt install commands if not some commands here are not yet available.
 
-# Process and System Utility Commands
+example: `sudo apt search renice`{{execute}} 
+         `sudo apt install -y  renice`{{execute}}
 
+## renice
+`renice`{{execute}} - Changes the suggested priority for a process
 
+## reset
+`reset`{{execute}} - Attempts to reset the terminal
 
-#renice
+## strace
+`strace`{{execute}} - Traces system calls
 
-Changes the suggested priority for a process
+## su
+`su`{{execute}} - Switches users
 
-#reset
+## sync
+`sync`{{execute}} - Writes kernel buffers to disk
 
-Attempts to reset the terminal
+## time
+`time`{{execute}} - Displays how much processor and system time a process takes
 
-#strace
+## top
+`top`{{execute}} - Shows the processes with the most resource consumption
 
-Traces system calls
-
-#su
-
-Switches users
-
-#sync
-
-Writes kernel buffers to disk
-
-#time
-
-Displays how much processor and system time a process takes
-
-#top
-
-Shows the processes with the most resource consumption
-
-#umount
-
-Detaches a filesystem from a directory tree
-
-Displays the first matching program in the current path
+## umount
+`umount`{{execute}} - Detaches a filesystem from a directory tree
+                    - Displays the first matching program in the current path
