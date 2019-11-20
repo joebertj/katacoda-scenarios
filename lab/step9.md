@@ -1,16 +1,19 @@
-# Process and System Utility Commands
+## Process and System Utility Commands
 
-login
+# login
 
 Allows a user to login
+-> is a command used to establish a new session with the system.
 
-lsof
+# lsof
 
 Lists open files and other information
+-> is a command that gives information to find out files opened by a process.
 
-mount
+# mount
 
 Attaches a filesystem to a directory tree
+-> 
 
 newgrp
 
