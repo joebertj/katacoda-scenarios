@@ -18,7 +18,7 @@ A powerful stream editor for filtering and transforming text.
 
 `man sed -y info`{{execute}} Type q to exit.
 
-## grep
+## grep command
 
 Filters output lines matching a given pattern.
 
